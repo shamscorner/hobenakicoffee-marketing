@@ -4,6 +4,9 @@ This is where all the marketing content for our product is stored. This includes
 
 ## 🚀 Project Structure
 
+node version: v22.11.0
+package manager: pnpm v9
+
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
