@@ -14,7 +14,8 @@
 		"astro": "astro",
 		"format:check": "prettier --check .",
 		"format": "prettier --write .",
-		"typesafe-i18n": "typesafe-i18n"
+		"typesafe-i18n": "typesafe-i18n",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@astrojs/node": "^9.1.0",
@@ -39,6 +40,7 @@
 		"bits-ui": "1.0.0-next.94",
 		"clsx": "^2.1.1",
 		"husky": "^9.1.7",
+		"lint-staged": "^15.4.3",
 		"prettier": "^3.5.0",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-svelte": "^3.3.3",
@@ -47,5 +49,14 @@
 		"tailwind-merge": "^2.6.0",
 		"tailwind-variants": "^0.3.1",
 		"tailwindcss-animate": "^1.0.7"
+	},
+	"packageManager": "pnpm@9.0.0",
+	"engines": {
+		"node": ">=18"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
