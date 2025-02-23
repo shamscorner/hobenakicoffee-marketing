@@ -1,0 +1,34 @@
+---
+import { LL } from '@utils/i18n';
+
+import Layout from '@layouts/Layout.astro';
+import { Button } from '$lib/components/ui/button/index.js';
+---
+
+<Layout title={LL.title()} description={LL.description()} keywords={LL.keywords()} lonely>
+	<main class="grid min-h-screen place-items-center px-6 py-24 sm:py-32 lg:px-8">
+		<div class="text-center">
+			<p class="text-5xl font-semibold text-primary md:text-9xl">404</p>
+			<h1 class="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
+				{LL.page404.title()}
+			</h1>
+			<p class="mt-6 text-base leading-7">
+				{LL.page404.description()}
+			</p>
+			<div class="mt-10 flex items-center justify-center gap-x-4">
+				<Button href={LL.page404.actions.goHome.href()} size="lg">
+					{LL.page404.actions.goHome.label()}
+				</Button>
+
+				<Button
+					href={LL.page404.actions.contactSupport.href()}
+					variant="link"
+					class="font-semibold hover:no-underline"
+				>
+					{LL.page404.actions.contactSupport.label()}
+					<span aria-hidden="true">&rarr;</span>
+				</Button>
+			</div>
+		</div>
+	</main>
+</Layout>

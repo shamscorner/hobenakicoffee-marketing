@@ -1,0 +1,20 @@
+---
+import { LL } from '@utils/i18n';
+
+import CallToAction from '@components/call-to-action.astro';
+import DesignedForCreators from '@components/designed-for-creators.astro';
+import HeroSection from '@components/hero-section.astro';
+import HowItIsBeingUsed from '@components/how-it-is-being-used/how-it-is-being-used.astro';
+import Layout from '@layouts/Layout.astro';
+
+export const prerender = 'false';
+---
+
+<Layout title={LL.title()} description={LL.description()} keywords={LL.keywords()}>
+	<main class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
+		<HeroSection />
+		<HowItIsBeingUsed />
+		<DesignedForCreators />
+		<CallToAction />
+	</main>
+</Layout>

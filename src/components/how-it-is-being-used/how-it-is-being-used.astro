@@ -1,0 +1,42 @@
+---
+import { LL } from '@utils/i18n';
+import Facebook from './facebook.astro';
+import Youtube from './youtube.astro';
+import Tiktok from './tiktok.astro';
+import FacebookReel from './facebook-reel.astro';
+import InstagramReel from './instagram-reel.astro';
+import LinkedinProfile from './linkedin-profile.astro';
+import XProfile from './x-profile.astro';
+---
+
+<div id="how-it-works" class="mx-auto mb-20 mt-20 md:mt-0">
+	<h2 class="max-w-md text-3xl font-semibold">{LL.landingPage.howItIsBeingUsed.title()}</h2>
+	<p class="mt-4 max-w-xl">{LL.landingPage.howItIsBeingUsed.subtitle()}</p>
+
+	<div class="mt-10 space-y-16 md:mt-20 md:space-y-28">
+		<Facebook />
+		<Youtube />
+		<div>
+			<h3 class="mx-auto mb-8 max-w-lg text-center text-xl font-semibold">
+				{LL.landingPage.howItIsBeingUsed.shortFormVideo()}
+			</h3>
+			<div
+				class="grid grid-cols-1 place-items-center gap-x-14 gap-y-12 md:grid-cols-2 lg:grid-cols-3"
+			>
+				<FacebookReel />
+				<Tiktok />
+				<div class="md:col-span-2 md:justify-self-center lg:col-span-1 lg:justify-self-auto">
+					<InstagramReel />
+				</div>
+			</div>
+			<div class="mt-20 grid grid-cols-1 justify-items-center gap-12 lg:grid-cols-2">
+				<LinkedinProfile />
+				<XProfile />
+			</div>
+		</div>
+
+		<p class="mx-auto max-w-3xl text-center text-3xl font-semibold leading-snug">
+			{LL.landingPage.howItIsBeingUsed.outro()}
+		</p>
+	</div>
+</div>

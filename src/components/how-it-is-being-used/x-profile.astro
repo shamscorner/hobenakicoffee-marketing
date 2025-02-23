@@ -1,0 +1,81 @@
+---
+import { Link, BriefcaseBusiness, BadgeCheck, Calendar, Clock } from 'lucide-astro';
+import SwirlyScribbledArrow from '@components/common/swirly-scribbled-arrow.astro';
+---
+
+<div class="space-y-6">
+	<div class="flex items-center gap-3">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 1200 1227"
+			class="w-8"
+			role="presentation"
+			><path
+				fill="#000"
+				d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
+			></path></svg
+		>
+		<span class="text-2xl font-semibold">Twitter</span>
+	</div>
+	<div class="max-w-2xl space-y-4 rounded-2xl border p-6">
+		<!-- {/* Header */} -->
+		<div class="flex items-center gap-2">
+			<h1 class="text-xl font-semibold">Abdur Rahman</h1>
+			<BadgeCheck class="h-6 w-6 fill-blue-500 text-white" />
+			<span role="img" aria-label="spider web"> 🕸️ </span>
+			<span role="img" aria-label="person at laptop"> 👨‍💻 </span>
+		</div>
+
+		<!-- {/* Handle */} -->
+		<div class="text-gray-600">@abdur-rahman</div>
+
+		<!-- {/* Bio */} -->
+		<div class="space-y-2">
+			<p class="text-gray-900">
+				Frontend lead • Full-stack Developer • Teaching for free (DM me) • Data Mining & AI explorer
+			</p>
+		</div>
+
+		<!-- {/* Metadata */} -->
+		<div class="grid gap-2 text-sm text-gray-600">
+			<div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+				<div class="flex items-center gap-2">
+					<BriefcaseBusiness class="h-5 w-5 shrink-0" />
+					Technology
+				</div>
+				<span class="mx-2 hidden sm:inline-block">•</span>
+
+				<div class="relative">
+					<a
+						href="https://hobenakicoffee.com/abdur-rahman"
+						class="flex items-center gap-1 text-blue-500 hover:underline"
+					>
+						<Link class="h-4 w-4" />
+						hobenakicoffee.com/abdur-rahman
+					</a>
+					<div class="absolute bottom-6 left-[140px] h-16 w-16 rotate-180 text-primary">
+						<SwirlyScribbledArrow />
+					</div>
+				</div>
+			</div>
+			<div class="flex items-center gap-2">
+				<Calendar class="h-5 w-5 shrink-0" />
+				Born August 4, 1994
+				<span class="mx-2">•</span>
+				<Clock class="h-5 w-5 shrink-0" />
+				Joined July 2017
+			</div>
+		</div>
+
+		<!-- {/* Stats */} -->
+		<div class="flex gap-4 text-gray-600">
+			<button class="hover:underline">
+				<span class="font-semibold text-gray-900">131</span> Following
+			</button>
+			<button class="hover:underline">
+				<span class="font-semibold text-gray-900">273</span> Followers
+			</button>
+		</div>
+	</div>
+</div>

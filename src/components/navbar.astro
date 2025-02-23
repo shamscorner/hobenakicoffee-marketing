@@ -1,0 +1,145 @@
+---
+import { LL } from '@utils/i18n';
+import Logo from './Logo.astro';
+import { Button } from '$lib/components/ui/button/index.js';
+---
+
+<script is:inline type="module" async>
+	function openNavbar() {
+		document.getElementById('container-mobile-menu').classList.remove('hidden');
+		document.getElementById('container-mobile-menu-backdrop').classList.remove('hidden');
+	}
+
+	function closeNavbar() {
+		document.getElementById('container-mobile-menu').classList.add('hidden');
+		document.getElementById('container-mobile-menu-backdrop').classList.add('hidden');
+	}
+
+	const buttonOpen = document.getElementById('button-open-navbar');
+	const buttonClose = document.getElementById('button-close-navbar');
+
+	if (buttonOpen) {
+		buttonOpen.addEventListener('click', openNavbar);
+	}
+
+	if (buttonClose) {
+		buttonClose.addEventListener('click', closeNavbar);
+	}
+
+	document.querySelectorAll('.navbar-item').forEach((item) => {
+		item.addEventListener('click', closeNavbar);
+	});
+</script>
+
+<header
+	class="sticky top-0 z-40 h-[3.5rem] bg-background shadow-sm"
+	aria-labelledby="footer-heading"
+>
+	<h2 id="header-heading" class="sr-only">{LL.navbar.srOnly.header()}</h2>
+	<nav
+		class="mx-auto flex max-w-5xl items-center justify-between gap-x-6 px-6 py-2.5 md:px-8"
+		aria-label="Global"
+	>
+		<div class="flex lg:flex-1"><Logo /></div>
+		<div class="hidden lg:flex lg:items-center lg:gap-x-8">
+			{
+				Object.values(LL.navbar.items).map((item) => (
+					<a
+						href={item.link()}
+						class="group relative block overflow-hidden pb-1 text-sm leading-6 hover:text-primary"
+					>
+						{item.name()}
+						<span class="absolute bottom-0 left-0 right-0 block -translate-x-full border-b-2 border-primary transition-transform delay-100 duration-300 group-hover:translate-x-0" />
+					</a>
+				))
+			}
+			<div class="flex items-center gap-x-3">
+				<Button href={import.meta.env.PUBLIC_SIGN_IN_PAGE_URL} variant="outline">
+					{LL.navbar.login()}
+				</Button>
+				<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}>{LL.navbar.signup()}</Button>
+			</div>
+		</div>
+		<div class="flex gap-5 lg:hidden">
+			<div class="space-x-2">
+				<Button href={import.meta.env.PUBLIC_SIGN_IN_PAGE_URL} variant="outline" size="sm">
+					{LL.navbar.login()}
+				</Button>
+				<Button
+					href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}
+					size="sm"
+					class="hidden sm:inline-flex"
+				>
+					{LL.navbar.signup()}
+				</Button>
+			</div>
+			<button
+				id="button-open-navbar"
+				type="button"
+				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-muted-foreground"
+			>
+				<span class="sr-only">{LL.navbar.srOnly.openMenu()}</span>
+				<svg
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					aria-hidden="true"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+				</svg>
+			</button>
+		</div>
+	</nav>
+	<!-- Mobile menu, show/hide based on menu open state. -->
+	<div class="lg:hidden" role="dialog" aria-modal="true">
+		{/* Background backdrop, show/hide based on slide-over state. */}
+		<div id="container-mobile-menu-backdrop" class="fixed inset-0 z-10 hidden backdrop-blur-sm">
+		</div>
+		<div
+			id="container-mobile-menu"
+			class="fixed inset-y-0 right-0 z-10 hidden w-full overflow-y-auto bg-background px-6 py-6 shadow sm:max-w-sm"
+		>
+			<div class="flex items-center justify-between gap-x-6">
+				<Logo />
+				<button
+					id="button-close-navbar"
+					type="button"
+					class="-m-2.5 rounded-md p-2.5 text-muted-foreground"
+				>
+					<span class="sr-only">{LL.navbar.srOnly.closeMenu()}</span>
+					<svg
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="mt-6 flow-root">
+				<div class="-my-6 divide-y divide-primary">
+					<div class="space-y-2 py-6">
+						{
+							Object.values(LL.navbar.items).map((item) => (
+								<a
+									href={item.link()}
+									class="navbar-item -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary/5"
+								>
+									{item.name()}
+								</a>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

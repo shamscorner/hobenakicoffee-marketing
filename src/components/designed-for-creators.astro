@@ -1,0 +1,54 @@
+---
+import { LL } from '@utils/i18n';
+import { Image } from 'astro:assets';
+
+import HeroBanner from '@assets/people-joining-hands.jpg';
+---
+
+<section class="py-16">
+	<!-- Hero Section -->
+	<div class="flex flex-col items-center gap-8 md:flex-row">
+		<div class="w-full md:w-1/3">
+			<Image
+				src={HeroBanner}
+				alt="People joining hands altogether"
+				title="This platform is build for creators, and they are not alone on their journey"
+				class="mx-auto w-full max-w-[300px]"
+				loading="lazy"
+			/>
+		</div>
+		<div class="w-full md:w-2/3">
+			<h2 class="mb-4 text-3xl font-bold md:text-4xl">
+				{LL.landingPage.designedForCreators.title()}
+			</h2>
+			<p class="text-xl">
+				{LL.landingPage.designedForCreators.subTitle()}
+			</p>
+		</div>
+	</div>
+
+	<!-- Features Grid -->
+	<div class="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+		{
+			Object.values(LL.landingPage.designedForCreators.features).map((feature) => (
+				<div class="space-y-4">
+					<div class="h-12 w-12">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							class={`h-full w-full ${feature.color()}`}
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							set:html={feature.icon()}
+						/>
+					</div>
+					<h3 class="text-lg font-semibold">{feature.title()}</h3>
+					<p class="text-foreground/70">{feature.description()}</p>
+				</div>
+			))
+		}
+	</div>
+</section>

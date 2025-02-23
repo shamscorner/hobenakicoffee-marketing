@@ -1,0 +1,9 @@
+---
+import { LL } from '@utils/i18n';
+import LogoOnly from './logo-only.astro';
+---
+
+<a href="/" title={LL.appLogo.hrefTitle()} class="transition hover:text-primary">
+	<span class="sr-only">{LL.appName()}</span>
+	<LogoOnly />
+</a>

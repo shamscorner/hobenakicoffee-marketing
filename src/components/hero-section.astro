@@ -1,0 +1,143 @@
+---
+import { LL } from '@utils/i18n';
+import { Button } from '$lib/components/ui/button/index.js';
+import * as Card from '$lib/components/ui/card/index.js';
+---
+
+<script is:inline type="module" async>
+	let cards = document.querySelectorAll('.hero-card');
+	let stackArea = document.getElementById('hero-stack-container');
+
+	function rotateCards() {
+		let angle = 0;
+		cards.forEach((card, index) => {
+			if (card.classList.contains('away')) {
+				card.style.transform = `translateY(-120vh) rotate(-48deg)`;
+			} else {
+				card.style.transform = ` rotate(${angle}deg)`;
+				angle = angle - 10;
+				card.style.zIndex = cards.length - index;
+			}
+		});
+	}
+
+	rotateCards();
+
+	window.addEventListener('scroll', () => {
+		if (window.innerWidth < 768) return;
+		if (!stackArea || !cards || !cards.length) return;
+
+		let distance = window.innerHeight * 0.5;
+
+		let topVal = stackArea.getBoundingClientRect().top;
+
+		let index = -1 * (topVal / distance + 1);
+
+		index = Math.floor(index);
+
+		for (let i = 0; i < cards.length - 1; i++) {
+			if (i <= index) {
+				cards[i].classList.add('away');
+			} else {
+				cards[i].classList.remove('away');
+			}
+		}
+		rotateCards();
+	});
+</script>
+
+<div
+	id="hero-stack-container"
+	class="relative mx-auto flex flex-col gap-x-6 gap-y-16 py-12 md:h-[calc(300vh-3.5rem)] md:flex-row md:py-0"
+>
+	<div
+		class="box-border flex flex-col justify-center gap-8 md:sticky md:left-0 md:top-[3.5rem] md:mt-0 md:h-[calc(100vh-3.5rem)] md:flex-1"
+	>
+		<div>
+			<p
+				class="mb-5 inline-block rounded-full border px-2 py-0.5 text-sm font-semibold text-muted-foreground"
+			>
+				{LL.landingPage.legend()}
+			</p>
+
+			<h1 class="max-w-4xl text-3xl font-semibold sm:text-5xl">
+				{LL.landingPage.title.part1()}<br />
+				{LL.landingPage.title.part2()}<br />
+				{LL.landingPage.title.part3()}
+			</h1>
+		</div>
+
+		<p class="max-w-4xl text-lg tracking-tight">
+			{LL.landingPage.subtitle()}
+		</p>
+
+		<div>
+			<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="xl">
+				{LL.landingPage.callToAction.getStarted()}
+			</Button>
+			<span class="ml-4 text-sm text-gray-800">{LL.landingPage.callToAction.itsFree()}</span>
+		</div>
+	</div>
+	<div class="sticky top-[3.5rem] hidden h-[calc(100vh-3.5rem)] flex-1 md:block">
+		{
+			Object.values(LL.landingPage.heroProps).map((heroItem) => (
+				<Card.Root class="hero-card absolute left-[calc(50%-175px)] top-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out">
+					<Card.Header>
+						<Card.Title class="text-lg font-semibold text-primary">{heroItem.title()}</Card.Title>
+					</Card.Header>
+					<Card.Content class="flex h-full flex-col gap-4">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							class="h-14 w-14 text-primary"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							set:html={heroItem.icon()}
+						/>
+						<p class="mb-14 mt-auto text-2xl font-medium leading-normal text-slate-600">
+							{heroItem.subtitle()}
+						</p>
+					</Card.Content>
+					<Card.Footer />
+				</Card.Root>
+			))
+		}
+	</div>
+	<div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-8 md:hidden">
+		{
+			Object.values(LL.landingPage.heroProps).map((heroItem) => (
+				<Card.Root class="relative transition duration-500 ease-in-out">
+					<Card.Header>
+						<Card.Title class="text-lg font-semibold text-primary">{heroItem.title()}</Card.Title>
+					</Card.Header>
+					<Card.Content>
+						<p class="mt-5 text-2xl font-medium leading-normal text-slate-600">
+							{heroItem.subtitle()}
+						</p>
+					</Card.Content>
+					<Card.Footer />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="absolute right-4 top-4 h-12 w-12 text-primary"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						set:html={heroItem.icon()}
+					/>
+				</Card.Root>
+			))
+		}
+	</div>
+</div>
+
+<style>
+	.away {
+		transform-origin: bottom left;
+	}
+</style>

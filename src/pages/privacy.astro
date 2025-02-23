@@ -1,0 +1,34 @@
+---
+import { LL } from '@utils/i18n';
+
+import Layout from '@layouts/Layout.astro';
+import PrivacyBn from '@components/privacy-policy/bn.astro';
+import PrivacyEn from '@components/privacy-policy/en.astro';
+import { Button } from '$lib/components/ui/button/index.js';
+
+export const prerender = 'true';
+---
+
+<Layout
+	title={LL.pagePrivacyPolicy.title()}
+	description={LL.pagePrivacyPolicy.description()}
+	keywords={LL.pagePrivacyPolicy.keywords()}
+>
+	<main class="mx-auto mb-24 max-w-5xl px-6 lg:px-8">
+		<div class="prose max-w-4xl lg:prose-lg">
+			<section id="terms-bengali" class="pt-10">
+				<div class="not-prose mb-10 flex items-center gap-4">
+					<Button href="#terms-english" variant="outline">Read in English</Button>
+				</div>
+				<PrivacyBn />
+			</section>
+
+			<section id="terms-english" class="mt-24 pt-10">
+				<div class="not-prose mb-10 flex items-center gap-4">
+					<Button href="#terms-bengali" variant="outline">বাংলায় পড়ুন</Button>
+				</div>
+				<PrivacyEn />
+			</section>
+		</div>
+	</main>
+</Layout>
