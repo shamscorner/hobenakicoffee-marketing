@@ -1,9 +1,9 @@
 ---
 export interface Props {
-	id: string;
+	id?: string;
 }
 
-const { id = 'GTM_MEASUREMENT_ID' } = Astro.props;
+const { id } = Astro.props;
 
 const noGtmScript = `
 	<noscript>
@@ -16,6 +16,10 @@ const noGtmScript = `
 	`;
 ---
 
-<!-- Google Tag Manager (noscript) -->
-<Fragment set:html={`${noGtmScript}`} />
-<!-- End Google Tag Manager (noscript) -->
+{
+	id && (
+		<>
+			<Fragment set:html={noGtmScript} />
+		</>
+	)
+}

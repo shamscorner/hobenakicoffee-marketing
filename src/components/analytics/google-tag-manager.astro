@@ -1,9 +1,9 @@
 ---
 export interface Props {
-	id: string;
+	id?: string;
 }
 
-const { id = 'GTM_MEASUREMENT_ID' } = Astro.props;
+const { id } = Astro.props;
 
 const gtmScript = `
 	<script type="text/partytown">
@@ -21,6 +21,10 @@ const gtmScript = `
 `;
 ---
 
-<!-- Google Tag Manager -->
-<Fragment set:html={`${gtmScript}`} />
-<!-- End Google Tag Manager -->
+{
+	id && (
+		<>
+			<Fragment set:html={gtmScript} />
+		</>
+	)
+}
