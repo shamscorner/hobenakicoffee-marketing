@@ -157,7 +157,7 @@ const bn = {
 
 	navbar: {
 		items: [
-			{ name: 'কিভাবে কাজ করে?', link: '#how-it-works' },
+			{ name: 'কিভাবে কাজ করে?', link: '/#how-it-works' },
 			{ name: 'সম্ভাব্য প্রশ্নসমূহ', link: '/faqs' },
 			{ name: 'যোগাযোগ করুন', link: '/contact' },
 		],

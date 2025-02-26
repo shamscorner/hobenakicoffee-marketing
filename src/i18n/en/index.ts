@@ -157,7 +157,7 @@ const en = {
 
 	navbar: {
 		items: [
-			{ name: 'How it works?', link: '#how-it-works' },
+			{ name: 'How it works?', link: '/#how-it-works' },
 			{ name: 'FAQs', link: '/faqs' },
 			{ name: 'Contact', link: '/contact' },
 		],
