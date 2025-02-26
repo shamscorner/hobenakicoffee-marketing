@@ -2,9 +2,9 @@
 import { LL } from '@utils/i18n';
 import Logo from './Logo.astro';
 import { Button } from '$lib/components/ui/button/index.js';
-import { unleash } from '@utils/unleash';
+import { isUserAuthenticationEnabled } from '@utils/unleash';
 
-const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
+console.log(isUserAuthenticationEnabled);
 ---
 
 <script is:inline type="module" async>
