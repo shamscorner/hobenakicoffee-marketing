@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { loadEnv } from 'vite';
 
 import tailwind from '@astrojs/tailwind';
 
@@ -13,9 +14,13 @@ import partytown from '@astrojs/partytown';
 
 import svelte from '@astrojs/svelte';
 
+const { SITE: site } = loadEnv(process.env.NODE_ENV || '', process.cwd(), '');
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hobenakicoffee.com',
+	// site: 'https://hobenakicoffee.com',
+	site,
+
 	integrations: [
 		tailwind({
 			applyBaseStyles: false,

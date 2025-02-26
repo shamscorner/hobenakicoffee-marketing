@@ -372,7 +372,7 @@ type RootTranslation = {
 				 */
 				name: string
 				/**
-				 * #​h​o​w​-​i​t​-​w​o​r​k​s
+				 * /​#​h​o​w​-​i​t​-​w​o​r​k​s
 				 */
 				link: string
 			}
@@ -955,7 +955,7 @@ export type TranslationFunctions = {
 				 */
 				name: () => LocalizedString
 				/**
-				 * #how-it-works
+				 * /#how-it-works
 				 */
 				link: () => LocalizedString
 			}
