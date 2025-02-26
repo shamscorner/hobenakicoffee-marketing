@@ -7,6 +7,7 @@ interface ImportMetaEnv {
 	readonly GTM_ID: string;
 	readonly CLARITY_ID: string;
 	readonly SITE: string;
+	readonly UNLEASH_API_KEY: string;
 }
 
 interface ImportMeta {
