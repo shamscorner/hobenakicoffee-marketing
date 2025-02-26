@@ -51,6 +51,7 @@ const en = {
 			getStarted: 'Get Started',
 			itsFree: '100% Free',
 			title: 'Why are you waiting for? Start your free trial now!',
+			inComingMessage: 'Coming soon! Keep an eye on our Facebook page. We will inform you as soon as it is released.',
 		},
 		heroProps: [
 			{

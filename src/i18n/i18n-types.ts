@@ -112,6 +112,10 @@ type RootTranslation = {
 			 * W​h​y​ ​a​r​e​ ​y​o​u​ ​w​a​i​t​i​n​g​ ​f​o​r​?​ ​S​t​a​r​t​ ​y​o​u​r​ ​f​r​e​e​ ​t​r​i​a​l​ ​n​o​w​!
 			 */
 			title: string
+			/**
+			 * C​o​m​i​n​g​ ​s​o​o​n​!​ ​K​e​e​p​ ​a​n​ ​e​y​e​ ​o​n​ ​o​u​r​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​.​ ​W​e​ ​w​i​l​l​ ​i​n​f​o​r​m​ ​y​o​u​ ​a​s​ ​s​o​o​n​ ​a​s​ ​i​t​ ​i​s​ ​r​e​l​e​a​s​e​d​.
+			 */
+			inComingMessage: string
 		}
 		heroProps: {
 			'0': {
@@ -695,6 +699,10 @@ export type TranslationFunctions = {
 			 * Why are you waiting for? Start your free trial now!
 			 */
 			title: () => LocalizedString
+			/**
+			 * Coming soon! Keep an eye on our Facebook page. We will inform you as soon as it is released.
+			 */
+			inComingMessage: () => LocalizedString
 		}
 		heroProps: {
 			'0': {

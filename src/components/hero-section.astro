@@ -2,6 +2,7 @@
 import { LL } from '@utils/i18n';
 import { Button } from '$lib/components/ui/button/index.js';
 import * as Card from '$lib/components/ui/card/index.js';
+import { isUserAuthenticationEnabled } from '@utils/unleash';
 ---
 
 <script is:inline type="module" async>
@@ -72,10 +73,14 @@ import * as Card from '$lib/components/ui/card/index.js';
 		</p>
 
 		<div>
-			<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="xl">
-				{LL.landingPage.callToAction.getStarted()}
-			</Button>
-			<span class="ml-4 text-sm text-gray-800">{LL.landingPage.callToAction.itsFree()}</span>
+			{
+				isUserAuthenticationEnabled && (
+					<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="xl" class="mr-4">
+						{LL.landingPage.callToAction.getStarted()}
+					</Button>
+				)
+			}
+			<span class="text-sm text-gray-800">{LL.landingPage.callToAction.itsFree()}</span>
 		</div>
 	</div>
 	<div class="sticky top-[3.5rem] hidden h-[calc(100vh-3.5rem)] flex-1 md:block">
