@@ -7,5 +7,3 @@ export const unleash = new UnleashClient({
 });
 
 unleash.start();
-
-export const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
