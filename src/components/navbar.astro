@@ -2,6 +2,9 @@
 import { LL } from '@utils/i18n';
 import Logo from './Logo.astro';
 import { Button } from '$lib/components/ui/button/index.js';
+import { unleash } from '@utils/unleash';
+
+const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 ---
 
 <script is:inline type="module" async>
@@ -53,26 +56,38 @@ import { Button } from '$lib/components/ui/button/index.js';
 					</a>
 				))
 			}
-			<div class="flex items-center gap-x-3">
-				<Button href={import.meta.env.PUBLIC_SIGN_IN_PAGE_URL} variant="outline">
-					{LL.navbar.login()}
-				</Button>
-				<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}>{LL.navbar.signup()}</Button>
-			</div>
+			{
+				isUserAuthenticationEnabled ? (
+					<div class="flex items-center gap-x-3">
+						<Button href={import.meta.env.PUBLIC_SIGN_IN_PAGE_URL} variant="outline">
+							{LL.navbar.login()}
+						</Button>
+						<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}>{LL.navbar.signup()}</Button>
+					</div>
+				) : (
+					<p class="pb-1 text-sm font-semibold text-primary">{LL.landingPage.legend()}</p>
+				)
+			}
 		</div>
-		<div class="flex gap-5 lg:hidden">
-			<div class="space-x-2">
-				<Button href={import.meta.env.PUBLIC_SIGN_IN_PAGE_URL} variant="outline" size="sm">
-					{LL.navbar.login()}
-				</Button>
-				<Button
-					href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}
-					size="sm"
-					class="hidden sm:inline-flex"
-				>
-					{LL.navbar.signup()}
-				</Button>
-			</div>
+		<div class="flex items-center gap-5 lg:hidden">
+			{
+				isUserAuthenticationEnabled ? (
+					<div class="space-x-2">
+						<Button href={import.meta.env.PUBLIC_SIGN_IN_PAGE_URL} variant="outline" size="sm">
+							{LL.navbar.login()}
+						</Button>
+						<Button
+							href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}
+							size="sm"
+							class="hidden sm:inline-flex"
+						>
+							{LL.navbar.signup()}
+						</Button>
+					</div>
+				) : (
+					<p class="text-sm font-semibold text-primary">{LL.landingPage.legend()}</p>
+				)
+			}
 			<button
 				id="button-open-navbar"
 				type="button"

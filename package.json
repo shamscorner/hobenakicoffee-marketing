@@ -30,7 +30,8 @@
 		"svelte": "^5.19.3",
 		"tailwindcss": "^3.4.17",
 		"typesafe-i18n": "^5.26.2",
-		"typescript": "5.7.3"
+		"typescript": "5.7.3",
+		"unleash-proxy-client": "^3.7.3"
 	},
 	"devDependencies": {
 		"@shamscorner/config-tailwindcss": "^0.0.4",
