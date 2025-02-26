@@ -4,14 +4,14 @@
 	let { faqs = [] } = $props<{ faqs: FaqItem[] }>();
 </script>
 
-<Accordion.Root type="single" class="w-full">
+<Accordion.Root value={['item-0']} type="multiple" class="w-full">
 	{#each faqs as faq, index}
 		<Accordion.Item
 			value={`item-${index}`}
 			class="my-4 rounded-xl border-2 px-4 transition hover:border-primary"
 		>
 			<Accordion.Trigger
-				class="py-6 text-base font-semibold transition hover:text-primary hover:no-underline"
+				class="py-6 text-lg font-semibold transition hover:text-primary hover:no-underline"
 			>
 				{faq.question}
 			</Accordion.Trigger>
