@@ -33,6 +33,10 @@ const bn = {
 	contactFacebook,
 	contactYoutube,
 
+	common: {
+		upcoming: 'আসছে শীঘ্রই',
+	},
+
 	appLogo: {
 		hrefTitle: description,
 		alt: `${productName} Logo`,
@@ -46,7 +50,7 @@ const bn = {
 		},
 		subtitle:
 			'৩০-৪০% বেশি ইনকাম করুন শুধুমাত্র একটি লিঙ্ক শেয়ার করেই। আপনার প্রিয় সাপোর্টারদের ধন্যবাদ জানানোর সুযোগ করে দিন। এক্সক্লুসিভ কন্টেন্ট, গিফট, নিজস্ব প্রোডাক্ট থেকে শুরু করে যে কোন ধরনের ১-১ সাপোর্ট এখন শুধুমাত্র একটি প্লাটফর্ম থেকেই।',
-		legend: 'শীঘ্রই আসতেছে',
+		legend: 'হাজারো ক্রিয়েটরদের পছন্দের প্ল্যাটফর্ম',
 		callToAction: {
 			getStarted: 'এখনই শুরু করুন',
 			itsFree: '100% Free',

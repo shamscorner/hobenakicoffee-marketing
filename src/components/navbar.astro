@@ -65,7 +65,7 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 						<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL}>{LL.navbar.signup()}</Button>
 					</div>
 				) : (
-					<p class="pb-1 text-sm font-semibold text-primary">{LL.landingPage.legend()}</p>
+					<p class="pb-1 text-sm font-semibold text-primary">{LL.common.upcoming()}</p>
 				)
 			}
 		</div>
@@ -85,7 +85,7 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 						</Button>
 					</div>
 				) : (
-					<p class="text-sm font-semibold text-primary">{LL.landingPage.legend()}</p>
+					<p class="text-sm font-semibold text-primary">{LL.common.upcoming()}</p>
 				)
 			}
 			<button

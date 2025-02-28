@@ -66,6 +66,12 @@ type RootTranslation = {
 	 * h​t​t​p​s​:​/​/​w​w​w​.​y​o​u​t​u​b​e​.​c​o​m​/​c​h​a​n​n​e​l​/​s​h​a​m​s​c​o​r​n​e​r​-​l​l​c
 	 */
 	contactYoutube: string
+	common: {
+		/**
+		 * U​p​c​o​m​i​n​g
+		 */
+		upcoming: string
+	}
 	appLogo: {
 		/**
 		 * হ​ব​ে​ ​ন​া​ক​ি​ ​C​o​f​f​e​e​?​ ​i​s​ ​a​ ​p​l​a​t​f​o​r​m​ ​w​h​e​r​e​ ​y​o​u​ ​c​a​n​ ​e​a​r​n​ ​e​x​t​r​a​ ​m​o​n​e​y​ ​f​r​o​m​ ​y​o​u​r​ ​f​a​n​s​ ​a​n​d​ ​f​o​l​l​o​w​e​r​s​.​ ​E​a​r​n​ ​3​0​-​4​0​%​ ​m​o​r​e​ ​j​u​s​t​ ​b​y​ ​s​h​a​r​i​n​g​ ​a​ ​s​i​n​g​l​e​ ​l​i​n​k​.​ ​G​i​v​e​ ​y​o​u​r​ ​l​o​y​a​l​ ​s​u​p​p​o​r​t​e​r​s​ ​a​ ​c​h​a​n​c​e​ ​t​o​ ​s​h​o​w​ ​t​h​e​i​r​ ​a​p​p​r​e​c​i​a​t​i​o​n​.​ ​F​r​o​m​ ​e​x​c​l​u​s​i​v​e​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​g​i​f​t​s​ ​t​o​ ​p​e​r​s​o​n​a​l​ ​p​r​o​d​u​c​t​s​ ​a​n​d​ ​o​n​e​-​o​n​-​o​n​e​ ​s​u​p​p​o​r​t​—​e​v​e​r​y​t​h​i​n​g​ ​i​s​ ​n​o​w​ ​p​o​s​s​i​b​l​e​ ​f​r​o​m​ ​a​ ​s​i​n​g​l​e​ ​p​l​a​t​f​o​r​m​.
@@ -96,7 +102,7 @@ type RootTranslation = {
 		 */
 		subtitle: string
 		/**
-		 * C​o​m​i​n​g​ ​S​o​o​n
+		 * L​i​k​e​d​ ​b​y​ ​t​h​o​u​s​a​n​d​s​ ​o​f​ ​c​r​e​a​t​o​r​s
 		 */
 		legend: string
 		callToAction: {
@@ -679,6 +685,12 @@ export type TranslationFunctions = {
 	 * https://www.youtube.com/channel/shamscorner-llc
 	 */
 	contactYoutube: () => LocalizedString
+	common: {
+		/**
+		 * Upcoming
+		 */
+		upcoming: () => LocalizedString
+	}
 	appLogo: {
 		/**
 		 * হবে নাকি Coffee? is a platform where you can earn extra money from your fans and followers. Earn 30-40% more just by sharing a single link. Give your loyal supporters a chance to show their appreciation. From exclusive content and gifts to personal products and one-on-one support—everything is now possible from a single platform.
@@ -709,7 +721,7 @@ export type TranslationFunctions = {
 		 */
 		subtitle: () => LocalizedString
 		/**
-		 * Coming Soon
+		 * Liked by thousands of creators
 		 */
 		legend: () => LocalizedString
 		callToAction: {

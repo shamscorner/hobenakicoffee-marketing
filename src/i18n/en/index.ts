@@ -33,6 +33,10 @@ const en = {
 	contactFacebook,
 	contactYoutube,
 
+	common: {
+		upcoming: 'Upcoming',
+	},
+
 	appLogo: {
 		hrefTitle: description,
 		alt: `${productName} Logo`,
@@ -46,7 +50,7 @@ const en = {
 		},
 		subtitle:
 			'Earn 30-40% more just by sharing a single link. Give your loyal supporters a chance to show their appreciation. From exclusive content and gifts to personal products and one-on-one support—everything is now possible from a single platform.',
-		legend: 'Coming Soon',
+		legend: 'Liked by thousands of creators',
 		callToAction: {
 			getStarted: 'Get Started',
 			itsFree: '100% Free',
