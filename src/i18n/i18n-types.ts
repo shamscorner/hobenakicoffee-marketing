@@ -109,13 +109,39 @@ type RootTranslation = {
 			 */
 			itsFree: string
 			/**
-			 * W​h​y​ ​a​r​e​ ​y​o​u​ ​w​a​i​t​i​n​g​ ​f​o​r​?​ ​S​t​a​r​t​ ​y​o​u​r​ ​f​r​e​e​ ​t​r​i​a​l​ ​n​o​w​!
+			 * D​o​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​b​e​ ​s​u​c​c​e​s​s​f​u​l​ ​a​s​ ​a​ ​c​r​e​a​t​o​r​?
 			 */
 			title: string
+			/**
+			 * J​o​i​n​ ​t​h​o​u​s​a​n​d​s​ ​o​f​ ​c​r​e​a​t​o​r​s​ ​w​h​o​ ​h​a​v​e​ ​a​l​r​e​a​d​y​ ​s​u​c​c​e​e​d​e​d​ ​u​s​i​n​g​ ​"​হ​ব​ে​ ​ন​া​ক​ি​ ​C​o​f​f​e​e​?​"​.
+			 */
+			subtitle: string
 			/**
 			 * C​o​m​i​n​g​ ​s​o​o​n​!​ ​K​e​e​p​ ​a​n​ ​e​y​e​ ​o​n​ ​o​u​r​ ​F​a​c​e​b​o​o​k​ ​p​a​g​e​.​ ​W​e​ ​w​i​l​l​ ​i​n​f​o​r​m​ ​y​o​u​ ​a​s​ ​s​o​o​n​ ​a​s​ ​i​t​ ​i​s​ ​r​e​l​e​a​s​e​d​.
 			 */
 			inComingMessage: string
+			tickItem: {
+				/**
+				 * U​n​l​i​m​i​t​e​d​ ​g​i​f​t​ ​r​e​c​e​i​v​i​n​g​ ​o​p​p​o​r​t​u​n​i​t​y
+				 */
+				'0': string
+				/**
+				 * P​r​i​v​a​c​y​ ​F​o​c​u​s​e​d​ ​a​n​d​ ​S​e​c​u​r​e​ ​P​l​a​t​f​o​r​m
+				 */
+				'1': string
+				/**
+				 * V​e​r​y​ ​e​a​s​y​ ​t​o​ ​u​s​e
+				 */
+				'2': string
+				/**
+				 * A​l​w​a​y​s​ ​r​e​a​d​y​ ​f​o​r​ ​a​n​y​ ​h​e​l​p
+				 */
+				'3': string
+				/**
+				 * C​u​s​t​o​m​i​z​e​ ​a​s​ ​y​o​u​ ​l​i​k​e
+				 */
+				'4': string
+			}
 		}
 		heroProps: {
 			'0': {
@@ -696,13 +722,39 @@ export type TranslationFunctions = {
 			 */
 			itsFree: () => LocalizedString
 			/**
-			 * Why are you waiting for? Start your free trial now!
+			 * Do you want to be successful as a creator?
 			 */
 			title: () => LocalizedString
+			/**
+			 * Join thousands of creators who have already succeeded using "হবে নাকি Coffee?".
+			 */
+			subtitle: () => LocalizedString
 			/**
 			 * Coming soon! Keep an eye on our Facebook page. We will inform you as soon as it is released.
 			 */
 			inComingMessage: () => LocalizedString
+			tickItem: {
+				/**
+				 * Unlimited gift receiving opportunity
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Privacy Focused and Secure Platform
+				 */
+				'1': () => LocalizedString
+				/**
+				 * Very easy to use
+				 */
+				'2': () => LocalizedString
+				/**
+				 * Always ready for any help
+				 */
+				'3': () => LocalizedString
+				/**
+				 * Customize as you like
+				 */
+				'4': () => LocalizedString
+			}
 		}
 		heroProps: {
 			'0': {

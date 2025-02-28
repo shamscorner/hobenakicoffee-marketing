@@ -50,8 +50,16 @@ const en = {
 		callToAction: {
 			getStarted: 'Get Started',
 			itsFree: '100% Free',
-			title: 'Why are you waiting for? Start your free trial now!',
+			title: 'Do you want to be successful as a creator?',
+			subtitle: 'Join thousands of creators who have already succeeded using "হবে নাকি Coffee?".',
 			inComingMessage: 'Coming soon! Keep an eye on our Facebook page. We will inform you as soon as it is released.',
+			tickItem: [
+				'Unlimited gift receiving opportunity',
+				'Privacy Focused and Secure Platform',
+				'Very easy to use',
+				'Always ready for any help',
+				'Customize as you like'
+			]
 		},
 		heroProps: [
 			{
