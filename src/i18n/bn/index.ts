@@ -70,21 +70,25 @@ const bn = {
 				title: 'আকর্ষণীয় গিফট',
 				subtitle: 'আপনার প্রিয় সাপোর্টারদের কাছে থেকে আনলিমিটেড গিফট পাওয়ার সুযোগ',
 				icon: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>',
+				extraClass: 'bg-pink-50 border-pink-200 text-pink-500'
 			},
 			{
 				title: 'এক্সক্লুসিভ কন্টেন্ট',
 				subtitle: 'এক্সক্লুসিভ প্রিমিয়াম কন্টেন্ট তৈরি এবং বিক্রি করে বাড়তি আয়',
 				icon: '<path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>',
+				extraClass: 'bg-blue-50 border-blue-200 text-blue-500'
 			},
 			{
 				title: 'নিজস্ব প্রোডাক্ট',
 				subtitle: 'আপনার নিজস্ব অনলাইন দোকান এবং প্রোডাক্ট বিক্রি করার সুবিধা',
 				icon: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
+				extraClass: 'bg-amber-50 border-amber-300 text-amber-600'
 			},
 			{
 				title: 'ইউজার মেম্বারশিপ',
 				subtitle: 'একক (1v1) প্রিমিয়াম মেম্বারশিপ সার্ভিস প্রদানের সুযোগ',
 				icon: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+				extraClass: 'bg-emerald-50 border-emerald-200 text-emerald-500'
 			},
 		],
 		howItIsBeingUsed: {

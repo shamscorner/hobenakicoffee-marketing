@@ -3,6 +3,7 @@ import { LL } from '@utils/i18n';
 import { Button } from '$lib/components/ui/button/index.js';
 import * as Card from '$lib/components/ui/card/index.js';
 import { unleash } from '@utils/unleash';
+import { cn } from '@utils/index';
 
 const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 ---
@@ -88,15 +89,20 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 	<div class="sticky top-[3.5rem] hidden h-[calc(100vh-3.5rem)] flex-1 md:block">
 		{
 			Object.values(LL.landingPage.heroProps).map((heroItem) => (
-				<Card.Root class="hero-card absolute left-[calc(50%-175px)] top-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out">
+				<Card.Root
+					class={cn(
+						'hero-card absolute left-[calc(50%-175px)] top-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out',
+						heroItem.extraClass()
+					)}
+				>
 					<Card.Header>
-						<Card.Title class="text-lg font-semibold text-primary">{heroItem.title()}</Card.Title>
+						<Card.Title class="text-lg font-semibold">{heroItem.title()}</Card.Title>
 					</Card.Header>
 					<Card.Content class="flex h-full flex-col gap-4">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							class="h-14 w-14 text-primary"
+							class="h-14 w-14"
 							fill="none"
 							stroke="currentColor"
 							stroke-width="2"

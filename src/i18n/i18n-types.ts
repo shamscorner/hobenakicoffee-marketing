@@ -163,6 +163,10 @@ type RootTranslation = {
 				 * <​r​e​c​t​ ​x​=​"​3​"​ ​y​=​"​8​"​ ​w​i​d​t​h​=​"​1​8​"​ ​h​e​i​g​h​t​=​"​4​"​ ​r​x​=​"​1​"​/​>​<​p​a​t​h​ ​d​=​"​M​1​2​ ​8​v​1​3​"​/​>​<​p​a​t​h​ ​d​=​"​M​1​9​ ​1​2​v​7​a​2​ ​2​ ​0​ ​0​ ​1​-​2​ ​2​H​7​a​2​ ​2​ ​0​ ​0​ ​1​-​2​-​2​v​-​7​"​/​>​<​p​a​t​h​ ​d​=​"​M​7​.​5​ ​8​a​2​.​5​ ​2​.​5​ ​0​ ​0​ ​1​ ​0​-​5​A​4​.​8​ ​8​ ​0​ ​0​ ​1​ ​1​2​ ​8​a​4​.​8​ ​8​ ​0​ ​0​ ​1​ ​4​.​5​-​5​ ​2​.​5​ ​2​.​5​ ​0​ ​0​ ​1​ ​0​ ​5​"​/​>
 				 */
 				icon: string
+				/**
+				 * b​g​-​p​i​n​k​-​5​0​ ​b​o​r​d​e​r​-​p​i​n​k​-​2​0​0​ ​t​e​x​t​-​p​i​n​k​-​5​0​0
+				 */
+				extraClass: string
 			}
 			'1': {
 				/**
@@ -177,6 +181,10 @@ type RootTranslation = {
 				 * <​p​a​t​h​ ​d​=​"​M​2​0​.​3​8​ ​3​.​4​6​ ​1​6​ ​2​a​4​ ​4​ ​0​ ​0​ ​1​-​8​ ​0​L​3​.​6​2​ ​3​.​4​6​a​2​ ​2​ ​0​ ​0​ ​0​-​1​.​3​4​ ​2​.​2​3​l​.​5​8​ ​3​.​4​7​a​1​ ​1​ ​0​ ​0​ ​0​ ​.​9​9​.​8​4​H​6​v​1​0​c​0​ ​1​.​1​.​9​ ​2​ ​2​ ​2​h​8​a​2​ ​2​ ​0​ ​0​ ​0​ ​2​-​2​V​1​0​h​2​.​1​5​a​1​ ​1​ ​0​ ​0​ ​0​ ​.​9​9​-​.​8​4​l​.​5​8​-​3​.​4​7​a​2​ ​2​ ​0​ ​0​ ​0​-​1​.​3​4​-​2​.​2​3​z​"​/​>
 				 */
 				icon: string
+				/**
+				 * b​g​-​b​l​u​e​-​5​0​ ​b​o​r​d​e​r​-​b​l​u​e​-​2​0​0​ ​t​e​x​t​-​b​l​u​e​-​5​0​0
+				 */
+				extraClass: string
 			}
 			'2': {
 				/**
@@ -191,6 +199,10 @@ type RootTranslation = {
 				 * <​p​a​t​h​ ​d​=​"​M​6​ ​2​ ​3​ ​6​v​1​4​a​2​ ​2​ ​0​ ​0​ ​0​ ​2​ ​2​h​1​4​a​2​ ​2​ ​0​ ​0​ ​0​ ​2​-​2​V​6​l​-​3​-​4​Z​"​/​>​<​p​a​t​h​ ​d​=​"​M​3​ ​6​h​1​8​"​/​>​<​p​a​t​h​ ​d​=​"​M​1​6​ ​1​0​a​4​ ​4​ ​0​ ​0​ ​1​-​8​ ​0​"​/​>
 				 */
 				icon: string
+				/**
+				 * b​g​-​a​m​b​e​r​-​5​0​ ​b​o​r​d​e​r​-​a​m​b​e​r​-​3​0​0​ ​t​e​x​t​-​a​m​b​e​r​-​6​0​0
+				 */
+				extraClass: string
 			}
 			'3': {
 				/**
@@ -205,6 +217,10 @@ type RootTranslation = {
 				 * <​p​a​t​h​ ​d​=​"​M​1​6​ ​2​1​v​-​2​a​4​ ​4​ ​0​ ​0​ ​0​-​4​-​4​H​6​a​4​ ​4​ ​0​ ​0​ ​0​-​4​ ​4​v​2​"​/​>​<​c​i​r​c​l​e​ ​c​x​=​"​9​"​ ​c​y​=​"​7​"​ ​r​=​"​4​"​/​>​<​p​a​t​h​ ​d​=​"​M​2​2​ ​2​1​v​-​2​a​4​ ​4​ ​0​ ​0​ ​0​-​3​-​3​.​8​7​"​/​>​<​p​a​t​h​ ​d​=​"​M​1​6​ ​3​.​1​3​a​4​ ​4​ ​0​ ​0​ ​1​ ​0​ ​7​.​7​5​"​/​>
 				 */
 				icon: string
+				/**
+				 * b​g​-​e​m​e​r​a​l​d​-​5​0​ ​b​o​r​d​e​r​-​e​m​e​r​a​l​d​-​2​0​0​ ​t​e​x​t​-​e​m​e​r​a​l​d​-​5​0​0
+				 */
+				extraClass: string
 			}
 		}
 		howItIsBeingUsed: {
@@ -782,6 +798,10 @@ export type TranslationFunctions = {
 				 * <rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
 				 */
 				icon: () => LocalizedString
+				/**
+				 * bg-pink-50 border-pink-200 text-pink-500
+				 */
+				extraClass: () => LocalizedString
 			}
 			'1': {
 				/**
@@ -796,6 +816,10 @@ export type TranslationFunctions = {
 				 * <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
 				 */
 				icon: () => LocalizedString
+				/**
+				 * bg-blue-50 border-blue-200 text-blue-500
+				 */
+				extraClass: () => LocalizedString
 			}
 			'2': {
 				/**
@@ -810,6 +834,10 @@ export type TranslationFunctions = {
 				 * <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
 				 */
 				icon: () => LocalizedString
+				/**
+				 * bg-amber-50 border-amber-300 text-amber-600
+				 */
+				extraClass: () => LocalizedString
 			}
 			'3': {
 				/**
@@ -824,6 +852,10 @@ export type TranslationFunctions = {
 				 * <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
 				 */
 				icon: () => LocalizedString
+				/**
+				 * bg-emerald-50 border-emerald-200 text-emerald-500
+				 */
+				extraClass: () => LocalizedString
 			}
 		}
 		howItIsBeingUsed: {
