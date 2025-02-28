@@ -8,27 +8,6 @@ import { ArrowRight, CheckCircle, Link } from 'lucide-astro';
 const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 ---
 
-<!-- <section class="w-full px-4 py-12 md:py-32">
-	<div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-		{
-			isUserAuthenticationEnabled ? (
-				<>
-					<h2
-						set:html={LL.landingPage.callToAction.title()}
-						class="text-center text-3xl font-semibold tracking-tight md:text-left md:text-5xl md:leading-tight"
-					/>
-					<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="2xl">
-						{LL.landingPage.callToAction.getStarted()}
-					</Button>
-				</>
-			) : (
-				<h2 class="text-center text-3xl font-semibold tracking-tight md:text-5xl md:leading-tight">
-					{LL.landingPage.callToAction.inComingMessage()}
-				</h2>
-			)
-		}
-	</div>
-</section> -->
 <section class="py-20 sm:px-4">
 	<div class="mx-auto max-w-4xl">
 		<div
@@ -42,17 +21,24 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 				>
 					{LL.landingPage.callToAction.itsFree()}
 				</div>
-				<h2 class="mb-6 text-3xl md:text-4xl">
-					{LL.landingPage.callToAction.title()}
-				</h2>
-				<p class="mx-auto mb-8 max-w-2xl text-xl text-gray-600 dark:text-gray-300">
-					{LL.landingPage.callToAction.subtitle()}
-				</p>
-
-				<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="2xl" class="shadow-lg">
-					{LL.landingPage.callToAction.getStarted()}
-					<ArrowRight class="ml-2 w-5" />
-				</Button>
+				{
+					isUserAuthenticationEnabled ? (
+						<>
+							<h2 class="mb-6 text-3xl md:text-4xl">{LL.landingPage.callToAction.title()}</h2>
+							<p class="mx-auto mb-8 max-w-2xl text-xl text-gray-600 dark:text-gray-300">
+								{LL.landingPage.callToAction.subtitle()}
+							</p>
+							<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="2xl" class="shadow-lg">
+								{LL.landingPage.callToAction.getStarted()}
+								<ArrowRight class="ml-2 w-5" />
+							</Button>
+						</>
+					) : (
+						<h2 class="my-4 mb-6 text-3xl md:text-4xl">
+							{LL.landingPage.callToAction.inComingMessage()}
+						</h2>
+					)
+				}
 
 				<div class="mt-8 flex flex-wrap justify-center gap-5">
 					{
