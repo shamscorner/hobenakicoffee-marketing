@@ -8,7 +8,7 @@
 	{#each faqs as faq, index}
 		<Accordion.Item
 			value={`item-${index}`}
-			class="my-4 rounded-xl border-2 px-4 transition hover:border-primary"
+			class="my-4 rounded-xl border-2 border-l-4 bg-background px-4 transition hover:border-primary"
 		>
 			<Accordion.Trigger
 				class="py-6 text-lg font-semibold transition hover:text-primary hover:no-underline"
