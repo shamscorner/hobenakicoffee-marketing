@@ -1,0 +1,69 @@
+---
+import SectionAbout from './section-about.astro';
+import SectionBuyCoffee from './section-buy-coffee.astro';
+import SectionSupportersList from './section-supporters-list.astro';
+import SectionMiniShop from './section-mini-shop.astro';
+import SectionLatestPost from './section-latest-post.astro';
+import SectionExclusiveContent from './section-exclusive-content.astro';
+import SectionTutorial from './section-tutorial.astro';
+import SectionCommunitySupport from './section-community-support.astro';
+import SectionDigitalGoodies from './section-digital-goodies.astro';
+import SectionOneToOneChat from './section-one-to-one-chat.astro';
+import SectionHireForBusiness from './section-hire-for-business.astro';
+
+import { LL } from '@utils/i18n';
+---
+
+<section class="py-5 md:pt-10">
+	<h2 class="mx-auto max-w-xl text-center text-2xl font-semibold leading-snug md:text-3xl">
+		{LL.landingPage.customizedUserProfile.title()}
+	</h2>
+	<p class="mx-auto mt-4 max-w-3xl text-center">
+		{LL.landingPage.customizedUserProfile.subtitle()}
+	</p>
+
+	<!-- {/* Rope elements */} -->
+	<div class="mb-4 mt-8 flex justify-center">
+		<div class="mx-4 h-16 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+		<div class="mx-4 h-24 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+		<div class="mx-4 h-20 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+		<div class="mx-4 h-28 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+	</div>
+
+	<div class="w-full rounded-xl bg-slate-50 pb-12">
+		<!-- {/* Cover photo and profile section */} -->
+		<div
+			class="relative mb-16 h-48 w-full rounded-xl bg-gradient-to-r from-blue-100 to-purple-100 md:h-64"
+		>
+			<div class="container mx-auto px-4">
+				<div class="absolute -bottom-9 left-4 flex gap-4 md:left-8">
+					<div
+						class="relative h-24 w-24 overflow-hidden rounded-full border-4 border-white bg-pink-100 md:h-32 md:w-32"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- {/* Bento grid container */} -->
+		<div
+			class="relative mx-auto grid max-w-6xl grid-flow-dense grid-cols-1 gap-4 px-4 md:grid-cols-4 lg:grid-cols-6"
+		>
+			<SectionAbout />
+			<SectionBuyCoffee />
+			<SectionSupportersList />
+			<SectionMiniShop />
+			<SectionLatestPost />
+			<SectionExclusiveContent />
+			<SectionTutorial />
+			<SectionCommunitySupport />
+			<SectionDigitalGoodies />
+			<SectionOneToOneChat />
+			<SectionHireForBusiness />
+		</div>
+
+		<p class="mt-10 px-5 text-center text-sm text-gray-500">
+			{LL.landingPage.customizedUserProfile.disclaimer()}
+		</p>
+	</div>
+</section>

@@ -103,8 +103,12 @@ const en = {
 			},
 			shortFormVideo:
 				'Even in short-form videos, Abdur Rahman is earning using "হবে নাকি Coffee?".',
-			outro:
-				'ঠিক একই ভাবে আপনি ব্লগ, পোডকাস্ট, ওয়েবসাইট বা অন্য যে কোন প্ল্যাটফর্মে ব্যবহার করতে পারবেন।',
+			outro: 'You can use it in the same way on your blog, podcast, website, or any other platform.',
+		},
+		customizedUserProfile: {
+			title: 'Now let’s take a look at your customized profile at a glance.',
+			subtitle: 'Customize your profile page as you like. Here is an example of Abdur Rahman’s profile page. But you can customize your profile page according to the type of work you do.',
+			disclaimer: 'This profile is shown as an example. Your profile is entirely yours. You can customize it as you like.',
 		},
 		designedForCreators: {
 			title: 'Now You Are Not Alone.',

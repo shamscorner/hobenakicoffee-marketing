@@ -249,9 +249,23 @@ type RootTranslation = {
 			 */
 			shortFormVideo: string
 			/**
-			 * ঠ​ি​ক​ ​এ​ক​ই​ ​ভ​া​ব​ে​ ​আ​প​ন​ি​ ​ব​্​ল​গ​,​ ​প​ো​ড​ক​া​স​্​ট​,​ ​ও​য়​ে​ব​স​া​ই​ট​ ​ব​া​ ​অ​ন​্​য​ ​য​ে​ ​ক​ো​ন​ ​প​্​ল​্​য​া​ট​ফ​র​্​ম​ে​ ​ব​্​য​ব​হ​া​র​ ​ক​র​ত​ে​ ​প​া​র​ব​ে​ন​।
+			 * Y​o​u​ ​c​a​n​ ​u​s​e​ ​i​t​ ​i​n​ ​t​h​e​ ​s​a​m​e​ ​w​a​y​ ​o​n​ ​y​o​u​r​ ​b​l​o​g​,​ ​p​o​d​c​a​s​t​,​ ​w​e​b​s​i​t​e​,​ ​o​r​ ​a​n​y​ ​o​t​h​e​r​ ​p​l​a​t​f​o​r​m​.
 			 */
 			outro: string
+		}
+		customizedUserProfile: {
+			/**
+			 * N​o​w​ ​l​e​t​’​s​ ​t​a​k​e​ ​a​ ​l​o​o​k​ ​a​t​ ​y​o​u​r​ ​c​u​s​t​o​m​i​z​e​d​ ​p​r​o​f​i​l​e​ ​a​t​ ​a​ ​g​l​a​n​c​e​.
+			 */
+			title: string
+			/**
+			 * C​u​s​t​o​m​i​z​e​ ​y​o​u​r​ ​p​r​o​f​i​l​e​ ​p​a​g​e​ ​a​s​ ​y​o​u​ ​l​i​k​e​.​ ​H​e​r​e​ ​i​s​ ​a​n​ ​e​x​a​m​p​l​e​ ​o​f​ ​A​b​d​u​r​ ​R​a​h​m​a​n​’​s​ ​p​r​o​f​i​l​e​ ​p​a​g​e​.​ ​B​u​t​ ​y​o​u​ ​c​a​n​ ​c​u​s​t​o​m​i​z​e​ ​y​o​u​r​ ​p​r​o​f​i​l​e​ ​p​a​g​e​ ​a​c​c​o​r​d​i​n​g​ ​t​o​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​w​o​r​k​ ​y​o​u​ ​d​o​.
+			 */
+			subtitle: string
+			/**
+			 * T​h​i​s​ ​p​r​o​f​i​l​e​ ​i​s​ ​s​h​o​w​n​ ​a​s​ ​a​n​ ​e​x​a​m​p​l​e​.​ ​Y​o​u​r​ ​p​r​o​f​i​l​e​ ​i​s​ ​e​n​t​i​r​e​l​y​ ​y​o​u​r​s​.​ ​Y​o​u​ ​c​a​n​ ​c​u​s​t​o​m​i​z​e​ ​i​t​ ​a​s​ ​y​o​u​ ​l​i​k​e​.
+			 */
+			disclaimer: string
 		}
 		designedForCreators: {
 			/**
@@ -884,9 +898,23 @@ export type TranslationFunctions = {
 			 */
 			shortFormVideo: () => LocalizedString
 			/**
-			 * ঠিক একই ভাবে আপনি ব্লগ, পোডকাস্ট, ওয়েবসাইট বা অন্য যে কোন প্ল্যাটফর্মে ব্যবহার করতে পারবেন।
+			 * You can use it in the same way on your blog, podcast, website, or any other platform.
 			 */
 			outro: () => LocalizedString
+		}
+		customizedUserProfile: {
+			/**
+			 * Now let’s take a look at your customized profile at a glance.
+			 */
+			title: () => LocalizedString
+			/**
+			 * Customize your profile page as you like. Here is an example of Abdur Rahman’s profile page. But you can customize your profile page according to the type of work you do.
+			 */
+			subtitle: () => LocalizedString
+			/**
+			 * This profile is shown as an example. Your profile is entirely yours. You can customize it as you like.
+			 */
+			disclaimer: () => LocalizedString
 		}
 		designedForCreators: {
 			/**

@@ -6,6 +6,7 @@ import DesignedForCreators from '@components/designed-for-creators.astro';
 import HeroSection from '@components/hero-section.astro';
 import HowItIsBeingUsed from '@components/how-it-is-being-used/how-it-is-being-used.astro';
 import Layout from '@layouts/Layout.astro';
+import CustomizedUserProfile from '@components/customized-user-profile/customized-user-profile.astro';
 
 export const prerender = 'false';
 ---
@@ -14,6 +15,7 @@ export const prerender = 'false';
 	<main class="mx-auto w-full max-w-5xl px-6 sm:px-8 md:px-10">
 		<HeroSection />
 		<HowItIsBeingUsed />
+		<CustomizedUserProfile />
 		<DesignedForCreators />
 		<CallToAction />
 	</main>

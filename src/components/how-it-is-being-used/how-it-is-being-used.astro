@@ -13,7 +13,7 @@ import XProfile from './x-profile.astro';
 	<h2 class="max-w-md text-3xl font-semibold">{LL.landingPage.howItIsBeingUsed.title()}</h2>
 	<p class="mt-4 max-w-xl">{LL.landingPage.howItIsBeingUsed.subtitle()}</p>
 
-	<div class="mt-10 space-y-16 md:mt-20 md:space-y-28">
+	<div class="mt-10 flex flex-col gap-y-16 md:mt-20 md:gap-y-28">
 		<Facebook />
 		<Youtube />
 		<div>
@@ -33,10 +33,10 @@ import XProfile from './x-profile.astro';
 				<LinkedinProfile />
 				<XProfile />
 			</div>
-		</div>
 
-		<p class="mx-auto max-w-3xl text-center text-3xl font-semibold leading-snug">
-			{LL.landingPage.howItIsBeingUsed.outro()}
-		</p>
+			<p class="mx-auto mt-10 max-w-3xl text-center font-semibold">
+				{LL.landingPage.howItIsBeingUsed.outro()}
+			</p>
+		</div>
 	</div>
 </div>

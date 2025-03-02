@@ -1,0 +1,27 @@
+---
+import { FileText } from 'lucide-astro';
+---
+
+<div class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-6 md:col-span-2">
+	<div class="mb-4 flex items-center">
+		<FileText class="mr-2 h-5 w-5 text-indigo-500" />
+		<h3 class="font-medium text-slate-800">সাম্প্রতিক পোস্টসমূহ</h3>
+	</div>
+	<ul class="mb-8 flex flex-col gap-y-2 text-sm">
+		<li class="border-b border-slate-100 pb-2">
+			<div class="text-slate-700 hover:text-indigo-600">মিনিমাল ইলাস্ট্রেশন তৈরি করা</div>
+			<p class="text-xs text-slate-500">২ দিন আগে</p>
+		</li>
+		<li class="border-b border-slate-100 pb-2">
+			<div class="text-slate-700 hover:text-indigo-600">আমার সৃজনশীল প্রক্রিয়া</div>
+			<p class="text-xs text-slate-500">১ সপ্তাহ আগে</p>
+		</li>
+		<li>
+			<div class="text-slate-700 hover:text-indigo-600">রঙের থিওরির মৌলিক বিষয়গুলো</div>
+			<p class="text-xs text-slate-500">২ সপ্তাহ আগে</p>
+		</li>
+	</ul>
+	<div class="mt-auto">
+		<div class="text-xs font-medium text-indigo-600">সব পোস্ট দেখুন →</div>
+	</div>
+</div>
