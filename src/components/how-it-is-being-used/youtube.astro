@@ -1,29 +1,19 @@
 ---
-import { Badge } from '$lib/components/ui/badge/index.js';
 import * as Card from '$lib/components/ui/card/index.js';
 import { CheckCircle, Download, MoreVertical, Share2, ThumbsDown, ThumbsUp } from 'lucide-astro';
 import SwirlyScribbledArrow from '../common/swirly-scribbled-arrow.astro';
 import { LL } from '@utils/i18n';
+import SkeletonText from '@components/common/skeleton-text.astro';
+import YoutubeLogo from '@components/logos/youtube.astro';
 ---
 
 <div class="max-w-4xl rounded-xl border p-5">
-	<svg
-		viewBox="0 0 256 180"
-		xmlns="http://www.w3.org/2000/svg"
-		preserveAspectRatio="xMidYMid"
-		class="-mt-10 w-12"
-	>
-		<path
-			d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
-			fill="red"
-		>
-		</path>
-		<path fill="#FFF" d="m102.421 128.06 66.328-38.418-66.328-38.418z"></path>
-	</svg>
-	<p class="mb-4 mt-2 max-w-3xl text-lg font-medium">
-		ভালো ডেভেলপার হওয়ার জন্য তোমার কী কী জিনিস শেখা উচিত। Journey to become a great developer ||
-		আব্দুর রাহমান
-	</p>
+	<YoutubeLogo class="-mt-10 w-12" />
+
+	<div class="mb-4 mt-4">
+		<SkeletonText class="h-4" />
+		<SkeletonText class="h-4 max-w-60" />
+	</div>
 
 	<div class="mb-4 flex flex-col items-start justify-between gap-5 md:flex-row">
 		<div class="flex items-center gap-3">
@@ -71,51 +61,21 @@ import { LL } from '@utils/i18n';
 	<Card.Root class="border-none bg-gray-100 p-4 shadow-none">
 		<div class="mb-2 flex gap-2">
 			<span>82,599 views</span>
-			<span>Oct 23, 2023</span>
+			<span>Oct 23, 2024</span>
 		</div>
 
 		<div class="flex flex-col gap-y-4 text-sm">
-			<p>💠 ভালো ডেভেলপার হতে চাই? শিখুন এই 10টি স্কিল! 💠</p>
+			<SkeletonText class="mt-2 max-w-96" />
 
-			<p>একজন দক্ষ ডেভেলপার হতে গেলে কোন কোন স্কিল লাগবে? 💻🔥</p>
+			<div>
+				<SkeletonText count={2} />
+			</div>
 
-			<p>
-				এই ভিডিওতে আমি আলোচনা করেছি 10টি গুরুত্বপূর্ণ স্কিল, যা একজন প্রোগ্রামার হিসেবে তোমার
-				ক্যারিয়ারকে অনেক দূর এগিয়ে নিয়ে যাবে! 🚀
-			</p>
-
-			<div class="flex flex-col gap-y-2">
-				<p>🚀 কভার করা টপিকসমূহ:</p>
-				<ul class="flex flex-col gap-y-1">
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						প্রোগ্রামিং নলেজ 💻
-					</li>
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						ফ্রেমওয়ার্ক মাস্টারি 🔨
-					</li>
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						প্রব্লেম সলভিং 🧠
-					</li>
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						গিট/গিটহাব ব্যবহার 💡
-					</li>
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						ডিবাগিং ও টেস্টিং ⚒️
-					</li>
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						সার্ভার ও ডাটাবেজ জ্ঞান 📊
-					</li>
-					<li class="flex items-center gap-2">
-						<CheckCircle class="h-4 w-4 text-green-600" />
-						সফট স্কিলস ✍️
-					</li>
-				</ul>
+			<div>
+				<SkeletonText class="max-w-64" />
+				<div>
+					<SkeletonText count={7} class="max-w-48" />
+				</div>
 			</div>
 
 			<div class="relative flex flex-wrap items-center gap-2 py-2">
@@ -139,11 +99,10 @@ import { LL } from '@utils/i18n';
 			</div>
 
 			<div class="flex flex-wrap gap-2">
-				<Badge variant="secondary">#Programming</Badge>
-				<Badge variant="secondary">#DeveloperSkills</Badge>
-				<Badge variant="secondary">#CareerGrowth</Badge>
+				<SkeletonText class="w-28" />
+				<SkeletonText class="w-28" />
+				<SkeletonText class="w-28" />
 			</div>
-			<div>...</div>
 		</div>
 	</Card.Root>
 </div>
