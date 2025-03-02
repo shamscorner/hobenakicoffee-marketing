@@ -40,11 +40,11 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 					)
 				}
 
-				<div class="mt-8 flex flex-wrap justify-center gap-5">
+				<div class="mt-8 flex flex-wrap gap-5 sm:justify-center">
 					{
 						Object.values(LL.landingPage.callToAction.tickItem).map((item) => (
-							<div class="flex items-center rounded-full bg-white/70 px-3 py-1.5 text-sm text-gray-600 shadow-sm">
-								<CheckCircle size={14} class="mr-2 text-primary" />
+							<div class="flex items-center rounded-full bg-white/70 px-3 py-1.5 text-left text-sm text-gray-600 shadow-sm">
+								<CheckCircle size={14} class="mr-3 shrink-0 text-primary" />
 								{item}
 							</div>
 						))

@@ -19,7 +19,7 @@
 				sm: 'h-8 px-3 text-xs',
 				lg: 'h-10 px-8',
 				xl: 'h-12 px-8 text-lg',
-				'2xl': 'h-14 px-10 text-xl',
+				'2xl': 'sm:h-14 sm:px-10 sm:text-xl h-12 px-6 text-lg',
 				icon: 'h-9 w-9',
 			},
 		},
