@@ -21,7 +21,7 @@ const faqItems: FaqItem[] = Object.values(LL.pageFaqs.items).map((item) => {
 		class="grid min-h-screen place-items-center bg-gradient-to-b from-secondary/10 to-white px-6 py-24 sm:py-32 lg:px-8"
 	>
 		<section class="mx-auto w-full max-w-3xl">
-			<h2 class="text-center text-3xl font-bold">{LL.pageFaqs.title()}</h2>
+			<h2 class="text-center text-3xl font-bold text-primary">{LL.pageFaqs.title()}</h2>
 			<p class="mx-auto mb-10 mt-4 max-w-xl text-center text-lg">{LL.pageFaqs.description()}</p>
 
 			<FaqsComponent client:load faqs={faqItems} />
