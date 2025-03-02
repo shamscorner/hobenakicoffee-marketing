@@ -11,8 +11,6 @@ import {
 	Music,
 	Compass,
 } from 'lucide-astro';
-import { Image } from 'astro:assets';
-import VideoContent from '@assets/abdur-rahman-teaching.png';
 import SwirlyScribbledArrow from '../common/swirly-scribbled-arrow.astro';
 ---
 
@@ -37,72 +35,61 @@ import SwirlyScribbledArrow from '../common/swirly-scribbled-arrow.astro';
 		</svg>
 		<span class="text-2xl font-semibold">TikTok</span>
 	</div>
-	<div
-		class="relative h-[600px] overflow-hidden rounded-2xl border border-gray-300 bg-white text-gray-800"
-	>
-		<Image
-			src={VideoContent}
-			alt="A nice guy teaching"
-			title="This is a demonstration of how TikTok is being used for hobe naki coffee"
-			class="absolute inset-0 h-full w-full object-cover"
-			loading="lazy"
-		/>
+	<div class="relative h-[600px] overflow-hidden rounded-2xl border border-gray-300 text-gray-800">
 		<!-- {/* Top Navigation */} -->
 		<div class="absolute left-0 right-0 top-0 z-10 flex items-center justify-between p-4">
-			<div class="flex gap-x-8 font-semibold text-white">
+			<div class="flex gap-x-8 font-semibold">
 				<span>Following</span>
-				<span class="text-gray-300">For You</span>
+				<span class="text-gray-500">For You</span>
 			</div>
-			<Search class="h-6 w-6 text-white" />
+			<Search class="h-6 w-6" />
 		</div>
 
 		<!-- {/* Main Content */} -->
-		<div
-			class="relative flex h-full w-full items-center bg-gradient-to-t from-gray-900/60 to-gray-800/10 px-4"
-		>
-			<div class="absolute bottom-1/2 left-1/2 h-16 w-16 rotate-180 text-white">
+		<div class="relative flex h-full w-full items-start justify-center px-4">
+			<div class="absolute bottom-1/2 left-1/2 top-20 h-16 w-16 rotate-180 text-primary">
 				<SwirlyScribbledArrow />
 			</div>
 			<p
-				class="mt-14 max-w-[18rem] rounded-md bg-gray-600/50 px-4 py-4 text-2xl font-bold text-white shadow-md"
+				class="mt-40 max-w-[18rem] rounded-md bg-gray-600/50 px-4 py-4 text-2xl font-bold text-white shadow-md"
 			>
 				hobenakicoffee.com<br />/abdur-rahman
 			</p>
 		</div>
 
 		<!-- {/* Right Sidebar Actions */} -->
-		<div class="absolute bottom-24 right-4 flex flex-col items-center gap-y-6">
+		<div class="absolute bottom-24 right-4 flex flex-col items-center gap-y-2">
 			<div class="flex flex-col items-center">
-				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100/30">
-					<Heart class="h-6 w-6 text-gray-300" />
+				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
+					<Heart class="h-6 w-6" />
 				</div>
-				<span class="mt-1 text-xs text-white">99.1k</span>
+				<span class="mt-1 text-xs">99.1k</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100/30">
-					<MessageSquare class="h-6 w-6 text-gray-300" />
+				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
+					<MessageSquare class="h-6 w-6" />
 				</div>
-				<span class="mt-1 text-xs text-white">3456</span>
+				<span class="mt-1 text-xs">3456</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100/30">
-					<Bookmark class="h-6 w-6 text-gray-300" />
+				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
+					<Bookmark class="h-6 w-6" />
 				</div>
-				<span class="mt-1 text-xs text-white">256</span>
+				<span class="mt-1 text-xs">256</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100/30">
-					<Share2 class="h-6 w-6 text-gray-300" />
+				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
+					<Share2 class="h-6 w-6" />
 				</div>
-				<span class="mt-1 text-xs text-white">1256</span>
+				<span class="mt-1 text-xs">1256</span>
 			</div>
 		</div>
 
 		<!-- {/* Video Info Overlay */} -->
-		<div class="absolute bottom-24 left-4 right-20 z-10 text-white">
+		<div class="absolute bottom-24 left-4 right-20 z-10">
 			<div class="text-sm font-semibold">@abdur-rahman</div>
 			<div class="mt-2 text-sm">ওয়েব ডেভেলপমেন্ট শেখার ১০ টি নিয়ম</div>
-			<div class="mt-2 flex items-center text-xs text-gray-100">
+			<div class="mt-2 flex items-center text-xs text-gray-500">
 				<Music class="mr-2 h-4 w-4" />
 				Original Sound - abdur-rahman
 			</div>
@@ -113,14 +100,14 @@ import SwirlyScribbledArrow from '../common/swirly-scribbled-arrow.astro';
 			class="absolute bottom-0 left-0 right-0 flex items-center justify-around border-t border-gray-200 bg-gray-50 p-4"
 		>
 			<div class="flex flex-col items-center">
-				<Home class="h-6 w-6 text-gray-600" />
+				<Home class="h-5 w-5 text-gray-600" />
 				<span class="mt-1 text-xs text-gray-600">Home</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<Compass class="h-6 w-6 text-gray-600" />
+				<Compass class="h-5 w-5 text-gray-600" />
 				<span class="mt-1 text-xs text-gray-600">Discover</span>
 			</div>
-			<div class="relative flex h-8 w-8 items-center justify-center shadow">
+			<div class="relative mx-1 flex h-7 w-7 items-center justify-center shadow">
 				<div class="absolute -right-1 h-full w-2 rounded-br-md rounded-tr-md bg-[#FE2C55]"></div>
 				<div class="absolute -left-1 h-full w-2 rounded-bl-md rounded-tl-md bg-[#2ce9fe]"></div>
 				<div class="relative z-10 flex h-8 w-8 items-center justify-center rounded-md bg-white">
@@ -128,11 +115,11 @@ import SwirlyScribbledArrow from '../common/swirly-scribbled-arrow.astro';
 				</div>
 			</div>
 			<div class="flex flex-col items-center">
-				<MessageCircle class="h-6 w-6 text-gray-600" />
+				<MessageCircle class="h-5 w-5 text-gray-600" />
 				<span class="mt-1 text-xs text-gray-600">Inbox</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<User class="h-6 w-6 text-gray-600" />
+				<User class="h-5 w-5 text-gray-600" />
 				<span class="mt-1 text-xs text-gray-600">Profile</span>
 			</div>
 		</div>
