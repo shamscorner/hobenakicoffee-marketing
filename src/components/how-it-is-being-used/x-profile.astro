@@ -1,21 +1,13 @@
 ---
 import { Link, BriefcaseBusiness, BadgeCheck, Calendar, Clock } from 'lucide-astro';
 import SwirlyScribbledArrow from '@components/common/swirly-scribbled-arrow.astro';
+import XLogo from '@components/logos/x.astro';
+import SkeletonText from '@components/common/skeleton-text.astro';
 ---
 
 <div class="flex flex-col gap-y-6">
 	<div class="flex items-center gap-3">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 1200 1227"
-			class="w-8"
-			role="presentation"
-			><path
-				fill="#000"
-				d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
-			></path></svg
-		>
+		<XLogo class="w-8" />
 		<span class="text-2xl font-semibold">Twitter</span>
 	</div>
 	<div class="flex max-w-2xl flex-col gap-y-4 rounded-2xl border p-6">
@@ -31,10 +23,8 @@ import SwirlyScribbledArrow from '@components/common/swirly-scribbled-arrow.astr
 		<div class="text-gray-600">@abdur-rahman</div>
 
 		<!-- {/* Bio */} -->
-		<div class="flex flex-col gap-y-2">
-			<p class="text-gray-900">
-				Frontend lead • Full-stack Developer • Teaching for free (DM me) • Data Mining & AI explorer
-			</p>
+		<div>
+			<SkeletonText count={2} />
 		</div>
 
 		<!-- {/* Metadata */} -->
@@ -42,7 +32,7 @@ import SwirlyScribbledArrow from '@components/common/swirly-scribbled-arrow.astr
 			<div class="flex flex-col gap-2 sm:flex-row sm:items-center">
 				<div class="flex items-center gap-2">
 					<BriefcaseBusiness class="h-5 w-5 shrink-0" />
-					Technology
+					<SkeletonText class="mb-0 w-20" />
 				</div>
 				<span class="mx-2 hidden sm:inline-block">•</span>
 
@@ -61,10 +51,10 @@ import SwirlyScribbledArrow from '@components/common/swirly-scribbled-arrow.astr
 			</div>
 			<div class="flex items-center gap-2">
 				<Calendar class="h-5 w-5 shrink-0" />
-				Born August 4, 1994
+				<SkeletonText class="mb-0 w-28" />
 				<span class="mx-2">•</span>
 				<Clock class="h-5 w-5 shrink-0" />
-				Joined July 2017
+				<SkeletonText class="mb-0 w-28" />
 			</div>
 		</div>
 
