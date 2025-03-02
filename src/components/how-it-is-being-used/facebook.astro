@@ -7,9 +7,14 @@ import SkeletonText from '@components/common/skeleton-text.astro';
 import FacebookLogo from '@components/logos/facebook.astro';
 ---
 
-<div class="mt-8 flex justify-center md:mt-0 md:justify-end">
+<div
+	class="mt-8 flex justify-center md:mt-0 md:justify-end"
+	role="presentation"
+	aria-labelledby="decorative-label-for-facebook-post"
+>
 	<Card.Root
 		class="relative border bg-gray-50 shadow-none md:min-w-[30rem] md:max-w-lg lg:min-w-[35rem] lg:max-w-xl"
+		aria-hidden="true"
 	>
 		<FacebookLogo class="absolute -top-6 left-[200px] w-12" />
 
@@ -65,6 +70,7 @@ import FacebookLogo from '@components/logos/facebook.astro';
 						<SwirlyScribbledArrow />
 					</div>
 					<div
+						id="decorative-label-for-facebook-post"
 						class="absolute -top-32 left-[-48%] hidden max-w-[230px] text-xl font-semibold md:block lg:-left-1/2 lg:text-2xl"
 					>
 						"{LL.landingPage.howItIsBeingUsed.facebook.hint()}"

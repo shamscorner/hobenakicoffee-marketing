@@ -16,8 +16,11 @@ import XProfile from './x-profile.astro';
 	<div class="mt-10 flex flex-col gap-y-16 md:mt-20 md:gap-y-28">
 		<Facebook />
 		<Youtube />
-		<div>
-			<h3 class="mx-auto mb-8 max-w-lg text-center text-xl font-semibold">
+		<div role="presentation" aria-labelledby="decorative-label-for-short-form-video">
+			<h3
+				id="decorative-label-for-short-form-video"
+				class="mx-auto mb-8 max-w-lg text-center text-xl font-semibold"
+			>
 				{LL.landingPage.howItIsBeingUsed.shortFormVideo()}
 			</h3>
 			<div
@@ -29,14 +32,23 @@ import XProfile from './x-profile.astro';
 					<InstagramReel />
 				</div>
 			</div>
-			<div class="mt-20 grid grid-cols-1 justify-items-center gap-12 lg:grid-cols-2">
+		</div>
+
+		<div role="presentation" aria-labelledby="decorative-label-for-social-media-profile">
+			<h3
+				id="decorative-label-for-social-media-profile"
+				class="mx-auto mb-12 max-w-lg text-center text-xl font-semibold"
+			>
+				{LL.landingPage.howItIsBeingUsed.socialMediaProfile()}
+			</h3>
+			<div class="grid grid-cols-1 justify-items-center gap-12 lg:grid-cols-2">
 				<LinkedinProfile />
 				<XProfile />
 			</div>
-
-			<p class="mx-auto mt-10 max-w-3xl text-center font-semibold">
-				{LL.landingPage.howItIsBeingUsed.outro()}
-			</p>
 		</div>
+
+		<p class="mx-auto -mt-12 max-w-3xl text-center font-semibold">
+			{LL.landingPage.howItIsBeingUsed.outro()}
+		</p>
 	</div>
 </div>

@@ -249,6 +249,10 @@ type RootTranslation = {
 			 */
 			shortFormVideo: string
 			/**
+			 * A​b​d​u​r​ ​R​a​h​m​a​n​ ​h​a​s​ ​a​l​s​o​ ​u​s​e​d​ ​t​h​e​ ​l​i​n​k​ ​o​f​ ​"​হ​ব​ে​ ​ন​া​ক​ি​ ​C​o​f​f​e​e​?​"​ ​i​n​ ​h​i​s​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​.
+			 */
+			socialMediaProfile: string
+			/**
 			 * Y​o​u​ ​c​a​n​ ​u​s​e​ ​i​t​ ​i​n​ ​t​h​e​ ​s​a​m​e​ ​w​a​y​ ​o​n​ ​y​o​u​r​ ​b​l​o​g​,​ ​p​o​d​c​a​s​t​,​ ​w​e​b​s​i​t​e​,​ ​o​r​ ​a​n​y​ ​o​t​h​e​r​ ​p​l​a​t​f​o​r​m​.
 			 */
 			outro: string
@@ -897,6 +901,10 @@ export type TranslationFunctions = {
 			 * Even in short-form videos, Abdur Rahman is earning using "হবে নাকি Coffee?".
 			 */
 			shortFormVideo: () => LocalizedString
+			/**
+			 * Abdur Rahman has also used the link of "হবে নাকি Coffee?" in his social media profile.
+			 */
+			socialMediaProfile: () => LocalizedString
 			/**
 			 * You can use it in the same way on your blog, podcast, website, or any other platform.
 			 */

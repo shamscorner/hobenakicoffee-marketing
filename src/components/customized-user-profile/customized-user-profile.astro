@@ -23,14 +23,18 @@ import { LL } from '@utils/i18n';
 	</p>
 
 	<!-- {/* Rope elements */} -->
-	<div class="mb-4 mt-8 flex justify-center">
+	<div class="mb-4 mt-8 flex justify-center" aria-hidden="true">
 		<div class="mx-4 h-16 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
 		<div class="mx-4 h-24 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
 		<div class="mx-4 h-20 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
 		<div class="mx-4 h-28 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
 	</div>
 
-	<div class="w-full rounded-xl bg-slate-50 pb-12">
+	<div
+		role="presentation"
+		aria-labelledby="decorative-label-for-customized-profile-disclaimer"
+		class="w-full rounded-xl bg-slate-50 pb-12"
+	>
 		<!-- {/* Cover photo and profile section */} -->
 		<div
 			class="relative mb-16 h-48 w-full rounded-xl bg-gradient-to-r from-blue-100 to-purple-100 md:h-64"
@@ -62,7 +66,10 @@ import { LL } from '@utils/i18n';
 			<SectionHireForBusiness />
 		</div>
 
-		<p class="mt-10 px-5 text-center text-sm text-gray-500">
+		<p
+			id="decorative-label-for-customized-profile-disclaimer"
+			class="mt-10 px-5 text-center text-sm text-gray-500"
+		>
 			{LL.landingPage.customizedUserProfile.disclaimer()}
 		</p>
 	</div>

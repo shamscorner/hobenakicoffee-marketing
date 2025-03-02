@@ -103,6 +103,8 @@ const en = {
 			},
 			shortFormVideo:
 				'Even in short-form videos, Abdur Rahman is earning using "হবে নাকি Coffee?".',
+			socialMediaProfile: 
+				'Abdur Rahman has also used the link of "হবে নাকি Coffee?" in his social media profile.',
 			outro: 'You can use it in the same way on your blog, podcast, website, or any other platform.',
 		},
 		customizedUserProfile: {

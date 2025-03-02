@@ -7,7 +7,11 @@ import SkeletonText from '@components/common/skeleton-text.astro';
 import YoutubeLogo from '@components/logos/youtube.astro';
 ---
 
-<div class="max-w-4xl rounded-xl border p-5">
+<div
+	class="max-w-4xl rounded-xl border p-5"
+	role="presentation"
+	aria-labelledby="decorative-label-for-youtube-post"
+>
 	<YoutubeLogo class="-mt-10 w-12" />
 
 	<div class="mb-4 mt-4">
@@ -94,6 +98,7 @@ import YoutubeLogo from '@components/logos/youtube.astro';
 					<SwirlyScribbledArrow />
 				</div>
 				<div
+					id="decorative-label-for-youtube-post"
 					class="absolute -top-32 left-[16rem] hidden max-w-[230px] text-xl font-semibold sm:block lg:left-[17rem] lg:text-2xl"
 				>
 					"{LL.landingPage.howItIsBeingUsed.youtube.hint()}"
