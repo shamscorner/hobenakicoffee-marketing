@@ -23,7 +23,7 @@ const makeTitle = title ? `${title} | ${LL.appName()}` : LL.title();
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL('/opengraph.jpg', Astro.site).toString();
+const resolvedImageWithDomain = new URL('/opengraph.png', Astro.site).toString();
 ---
 
 <!doctype html>
@@ -42,7 +42,7 @@ const resolvedImageWithDomain = new URL('/opengraph.jpg', Astro.site).toString()
 			twitter={{
 				title: LL.title(),
 				description: LL.description(),
-				image: 'https://hobenakicoffee.com/twitter-card.jpg',
+				image: 'https://hobenakicoffee.com/twitter-card.png',
 				imageAlt: 'হবে নাকি Coffee?',
 				card: 'summary_large_image',
 				site: '@shamscorner-llc',
