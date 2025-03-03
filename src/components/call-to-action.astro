@@ -11,13 +11,13 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 <section class="py-20 sm:px-4">
 	<div class="mx-auto max-w-4xl">
 		<div
-			class="relative overflow-hidden rounded-2xl border border-none border-gray-100 bg-background p-12 text-center"
+			class="bg-background relative overflow-hidden rounded-2xl border border-none border-gray-100 p-12 text-center"
 		>
-			<div class="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-primary/10">
+			<div class="from-primary/0 via-primary/5 to-primary/10 absolute inset-0 bg-linear-to-br">
 			</div>
 			<div class="relative z-10">
 				<div
-					class="mb-6 inline-block rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary"
+					class="bg-primary/10 text-primary mb-6 inline-block rounded-full px-4 py-1 text-sm font-medium"
 				>
 					{LL.landingPage.callToAction.itsFree()}
 				</div>
@@ -43,8 +43,8 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 				<ul class="mt-8 flex flex-wrap gap-5 sm:justify-center">
 					{
 						Object.values(LL.landingPage.callToAction.tickItem).map((item) => (
-							<li class="flex items-center rounded-full bg-white/70 px-3 py-1.5 text-left text-sm text-gray-600 shadow-sm">
-								<CheckCircle size={14} class="mr-3 shrink-0 text-primary" aria-hidden="true" />
+							<li class="flex items-center rounded-full bg-white/70 px-3 py-1.5 text-left text-sm text-gray-600 shadow-xs">
+								<CheckCircle size={14} class="text-primary mr-3 shrink-0" aria-hidden="true" />
 								{item}
 							</li>
 						))
@@ -53,12 +53,12 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 			</div>
 
 			<div
-				class="absolute left-0 top-0 -ml-10 -mt-10 h-32 w-32 rounded-full bg-secondary/15"
+				class="bg-secondary/15 absolute top-0 left-0 -mt-10 -ml-10 h-32 w-32 rounded-full"
 				aria-hidden="true"
 			>
 			</div>
 			<div
-				class="absolute bottom-0 right-0 -mb-10 -mr-10 h-40 w-40 rounded-full bg-primary/10"
+				class="bg-primary/10 absolute right-0 bottom-0 -mr-10 -mb-10 h-40 w-40 rounded-full"
 				aria-hidden="true"
 			>
 			</div>

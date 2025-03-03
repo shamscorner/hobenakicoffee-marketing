@@ -22,7 +22,7 @@ import TiktokLogo from '@components/logos/tiktok.astro';
 	</div>
 	<div class="relative h-[600px] overflow-hidden rounded-2xl border border-gray-300 text-gray-800">
 		<!-- {/* Top Navigation */} -->
-		<div class="absolute left-0 right-0 top-0 z-10 flex items-center justify-between p-4">
+		<div class="absolute top-0 right-0 left-0 z-10 flex items-center justify-between p-4">
 			<div class="flex gap-x-8 font-semibold">
 				<span>Following</span>
 				<span class="text-gray-500">For You</span>
@@ -32,7 +32,7 @@ import TiktokLogo from '@components/logos/tiktok.astro';
 
 		<!-- {/* Main Content */} -->
 		<div class="relative flex h-full w-full items-start justify-center px-4">
-			<div class="absolute bottom-1/2 left-1/2 top-20 h-16 w-16 rotate-180 text-primary">
+			<div class="text-primary absolute top-20 bottom-1/2 left-1/2 h-16 w-16 rotate-180">
 				<SwirlyScribbledArrow />
 			</div>
 			<p
@@ -43,7 +43,7 @@ import TiktokLogo from '@components/logos/tiktok.astro';
 		</div>
 
 		<!-- {/* Right Sidebar Actions */} -->
-		<div class="absolute bottom-24 right-4 flex flex-col items-center gap-y-2">
+		<div class="absolute right-4 bottom-24 flex flex-col items-center gap-y-2">
 			<div class="flex flex-col items-center">
 				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
 					<Heart class="h-6 w-6" />
@@ -71,7 +71,7 @@ import TiktokLogo from '@components/logos/tiktok.astro';
 		</div>
 
 		<!-- {/* Video Info Overlay */} -->
-		<div class="absolute bottom-24 left-4 right-20 z-10">
+		<div class="absolute right-20 bottom-24 left-4 z-10">
 			<div class="text-sm font-semibold">@abdur-rahman</div>
 			<div class="mt-2 text-sm">ওয়েব ডেভেলপমেন্ট শেখার ১০ টি নিয়ম</div>
 			<div class="mt-2 flex items-center text-xs text-gray-500">
@@ -82,7 +82,7 @@ import TiktokLogo from '@components/logos/tiktok.astro';
 
 		<!-- {/* Bottom Navigation */} -->
 		<div
-			class="absolute bottom-0 left-0 right-0 flex items-center justify-around border-t border-gray-200 bg-gray-50 p-4"
+			class="absolute right-0 bottom-0 left-0 flex items-center justify-around border-t border-gray-200 bg-gray-50 p-4"
 		>
 			<div class="flex flex-col items-center">
 				<Home class="h-5 w-5 text-gray-600" />
@@ -92,9 +92,9 @@ import TiktokLogo from '@components/logos/tiktok.astro';
 				<Compass class="h-5 w-5 text-gray-600" />
 				<span class="mt-1 text-xs text-gray-600">Discover</span>
 			</div>
-			<div class="relative mx-1 flex h-7 w-7 items-center justify-center shadow">
-				<div class="absolute -right-1 h-full w-2 rounded-br-md rounded-tr-md bg-[#FE2C55]"></div>
-				<div class="absolute -left-1 h-full w-2 rounded-bl-md rounded-tl-md bg-[#2ce9fe]"></div>
+			<div class="relative mx-1 flex h-7 w-7 items-center justify-center shadow-sm">
+				<div class="absolute -right-1 h-full w-2 rounded-tr-md rounded-br-md bg-[#FE2C55]"></div>
+				<div class="absolute -left-1 h-full w-2 rounded-tl-md rounded-bl-md bg-[#2ce9fe]"></div>
 				<div class="relative z-10 flex h-8 w-8 items-center justify-center rounded-md bg-white">
 					<span class="text-2xl">+</span>
 				</div>
