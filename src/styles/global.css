@@ -16,8 +16,8 @@
 @layer base {
 	@font-face {
 		font-family: 'NotoSansBengali';
-		src: url('fonts/NotoSansBengali-VariableFont_wdth,wght.woff2') format('woff2-variations');
-		src: url('fonts/NotoSansBengali-VariableFont_wdth,wght.woff2') format('woff2')
+		src: url('/fonts/NotoSansBengali-VariableFont_wdth,wght.woff2') format('woff2-variations');
+		src: url('/fonts/NotoSansBengali-VariableFont_wdth,wght.woff2') format('woff2')
 			tech('variations');
 		font-weight: 100 1000;
 	}
