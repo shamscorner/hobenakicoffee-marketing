@@ -14,6 +14,8 @@ import partytown from '@astrojs/partytown';
 
 import svelte from '@astrojs/svelte';
 
+import tailwindcss from '@tailwindcss/vite';
+
 const { SITE: site } = loadEnv(process.env.NODE_ENV || '', process.cwd(), '');
 
 // https://astro.build/config
@@ -38,8 +40,14 @@ export default defineConfig({
 		partytown(),
 		svelte(),
 	],
+
 	output: 'server',
+
 	adapter: node({
 		mode: 'standalone',
 	}),
+
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
