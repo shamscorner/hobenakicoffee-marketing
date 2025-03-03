@@ -14,6 +14,14 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+	@font-face {
+		font-family: 'NotoSansBengali';
+		src: url('fonts/NotoSansBengali-VariableFont_wdth,wght.woff2') format('woff2-variations');
+		src: url('fonts/NotoSansBengali-VariableFont_wdth,wght.woff2') format('woff2')
+			tech('variations');
+		font-weight: 100 1000;
+	}
+
 	*,
 	::after,
 	::before,
@@ -65,6 +73,9 @@
 	--font-mono:
 		'Source Code Pro Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
 		'Liberation Mono', 'Courier New', monospace;
+	--font-bengali:
+		'NotoSansBengali', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
 
 	/* Colors */
 	--color-border: hsl(var(--border));
@@ -144,6 +155,6 @@
 		@apply border-border;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply font-bengali bg-background text-foreground;
 	}
 }

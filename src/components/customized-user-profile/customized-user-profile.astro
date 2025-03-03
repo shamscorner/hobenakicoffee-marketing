@@ -14,32 +14,26 @@ import SectionHireForBusiness from './section-hire-for-business.astro';
 import { LL } from '@utils/i18n';
 ---
 
-<section class="py-5 md:pt-10">
-	<h2
-		class="text-primary mx-auto max-w-xl text-center text-2xl leading-snug font-semibold md:text-3xl"
-	>
+<section class="py-5 md:py-10">
+	<h2 class="mx-auto max-w-xl text-center text-2xl leading-snug font-semibold md:text-3xl">
 		{LL.landingPage.customizedUserProfile.title()}
 	</h2>
-	<p class="mx-auto mt-5 max-w-3xl text-center">
+	<p class="mx-auto mt-4 max-w-3xl text-center">
 		{LL.landingPage.customizedUserProfile.subtitle()}
 	</p>
 
 	<!-- {/* Rope elements */} -->
-	<div class="mt-8 mb-4 flex justify-center" aria-hidden="true">
-		<div class="mx-4 h-16 w-0.5 bg-linear-to-b from-slate-300 to-slate-400"></div>
-		<div class="mx-4 h-24 w-0.5 bg-linear-to-b from-slate-300 to-slate-400"></div>
-		<div class="mx-4 h-20 w-0.5 bg-linear-to-b from-slate-300 to-slate-400"></div>
-		<div class="mx-4 h-28 w-0.5 bg-linear-to-b from-slate-300 to-slate-400"></div>
+	<div class="mt-8 mb-4 flex justify-center">
+		<div class="mx-4 h-16 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+		<div class="mx-4 h-24 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+		<div class="mx-4 h-20 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
+		<div class="mx-4 h-28 w-0.5 bg-gradient-to-b from-slate-300 to-slate-400"></div>
 	</div>
 
-	<div
-		role="presentation"
-		aria-labelledby="decorative-label-for-customized-profile-disclaimer"
-		class="w-full rounded-xl bg-slate-50 pb-12"
-	>
+	<div class="w-full rounded-xl bg-slate-50 pb-12">
 		<!-- {/* Cover photo and profile section */} -->
 		<div
-			class="relative mb-16 h-48 w-full rounded-xl bg-linear-to-r from-blue-100 to-purple-100 md:h-64"
+			class="relative mb-16 h-48 w-full rounded-xl bg-gradient-to-r from-blue-100 to-purple-100 md:h-64"
 		>
 			<div class="container mx-auto px-4">
 				<div class="absolute -bottom-9 left-4 flex gap-4 md:left-8">
@@ -67,12 +61,5 @@ import { LL } from '@utils/i18n';
 			<SectionOneToOneChat />
 			<SectionHireForBusiness />
 		</div>
-
-		<p
-			id="decorative-label-for-customized-profile-disclaimer"
-			class="mt-10 px-5 text-center text-sm text-gray-500"
-		>
-			{LL.landingPage.customizedUserProfile.disclaimer()}
-		</p>
 	</div>
 </section>
