@@ -572,7 +572,7 @@ type RootTranslation = {
 				 */
 				name: string
 				/**
-				 * /​s​u​p​p​o​r​t
+				 * /​c​o​n​t​a​c​t
 				 */
 				link: string
 			}
@@ -1285,7 +1285,7 @@ export type TranslationFunctions = {
 				 */
 				name: () => LocalizedString
 				/**
-				 * /support
+				 * /contact
 				 */
 				link: () => LocalizedString
 			}

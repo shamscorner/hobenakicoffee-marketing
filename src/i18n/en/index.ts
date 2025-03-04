@@ -216,7 +216,7 @@ const en = {
 		copyrights: `© 2024 - ${new Date().getFullYear()} ${productName} all rights reserved`,
 		links: [
 			{ name: 'About', link: '/about' },
-			{ name: 'Support', link: '/support' },
+			{ name: 'Support', link: '/contact' },
 			{ name: 'Terms of Service', link: '/terms' },
 			{ name: 'Privacy Policy', link: '/privacy' },
 		],

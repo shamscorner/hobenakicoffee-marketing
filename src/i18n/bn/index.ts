@@ -217,7 +217,7 @@ const bn = {
 		copyrights: `স্বত্ব © 2024 - ${new Date().getFullYear()} - ${productName} সমস্ত অধিকার সংরক্ষিত`,
 		links: [
 			{ name: 'হবে নাকি Coffee সম্পর্কে', link: '/about' },
-			{ name: 'সাহায্য নিন', link: '/support' },
+			{ name: 'সাহায্য নিন', link: '/contact' },
 			{ name: 'শর্তাবলি ও নীতিমালা', link: '/terms' },
 			{ name: 'গোপনীয়তা নীতি', link: '/privacy' },
 		],
