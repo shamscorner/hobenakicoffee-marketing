@@ -430,9 +430,23 @@ type RootTranslation = {
 			privacyHint: string
 		}
 		/**
-		 * W​e​ ​b​e​l​i​e​v​e​ ​t​h​a​t​ ​e​v​e​r​y​ ​c​r​e​a​t​o​r​ ​h​a​s​ ​a​ ​u​n​i​q​u​e​ ​t​a​l​e​n​t​ ​w​o​r​t​h​ ​s​h​a​r​i​n​g​ ​w​i​t​h​ ​t​h​e​ ​w​o​r​l​d​.​ ​W​e​ ​r​e​s​p​e​c​t​ ​y​o​u​r​ ​t​a​l​e​n​t​,​ ​v​a​l​u​e​ ​y​o​u​r​ ​a​c​h​i​e​v​e​m​e​n​t​s​,​ ​a​n​d​ ​h​e​l​p​ ​y​o​u​ ​s​u​c​c​e​e​d​.
+		 * W​e​ ​b​e​l​i​e​v​e​ ​t​h​a​t​ ​e​v​e​r​y​ ​c​r​e​a​t​o​r​ ​d​e​s​e​r​v​e​s​ ​t​o​ ​b​e​ ​v​a​l​u​e​d​ ​a​n​d​ ​s​u​p​p​o​r​t​e​d​.​ ​O​u​r​ ​m​i​s​s​i​o​n​ ​i​s​ ​t​o​ ​m​a​k​e​ ​t​h​a​t​ ​p​o​s​s​i​b​l​e​,​ ​o​n​e​ ​c​o​f​f​e​e​ ​a​t​ ​a​ ​t​i​m​e​.
 		 */
 		ourMoto: string
+	}
+	pageAbout: {
+		/**
+		 * A​b​o​u​t​ ​U​s
+		 */
+		title: string
+		/**
+		 * L​e​a​r​n​ ​m​o​r​e​ ​a​b​o​u​t​ ​হ​ব​ে​ ​ন​া​ক​ি​ ​C​o​f​f​e​e​?​ ​a​n​d​ ​t​h​e​ ​t​e​a​m​ ​b​e​h​i​n​d​ ​i​t​.
+		 */
+		description: string
+		/**
+		 * a​b​o​u​t​,​ ​a​b​o​u​t​ ​u​s​,​ ​হ​ব​ে​ ​ন​া​ক​ি​ ​C​o​f​f​e​e​?
+		 */
+		keywords: string
 	}
 	pagePrivacyPolicy: {
 		/**
@@ -1143,9 +1157,23 @@ export type TranslationFunctions = {
 			privacyHint: () => LocalizedString
 		}
 		/**
-		 * We believe that every creator has a unique talent worth sharing with the world. We respect your talent, value your achievements, and help you succeed.
+		 * We believe that every creator deserves to be valued and supported. Our mission is to make that possible, one coffee at a time.
 		 */
 		ourMoto: () => LocalizedString
+	}
+	pageAbout: {
+		/**
+		 * About Us
+		 */
+		title: () => LocalizedString
+		/**
+		 * Learn more about হবে নাকি Coffee? and the team behind it.
+		 */
+		description: () => LocalizedString
+		/**
+		 * about, about us, হবে নাকি Coffee?
+		 */
+		keywords: () => LocalizedString
 	}
 	pagePrivacyPolicy: {
 		/**

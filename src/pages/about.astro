@@ -1,0 +1,99 @@
+---
+import { LL } from '@utils/i18n';
+
+import Layout from '@layouts/Layout.astro';
+import { Heart } from 'lucide-astro';
+
+export const prerender = 'true';
+---
+
+<Layout
+	title={LL.pageAbout.title()}
+	description={LL.pageAbout.description()}
+	keywords={LL.pageAbout.keywords()}
+>
+	<main class="container mx-auto max-w-3xl px-4 py-12">
+		<div class="flex flex-col gap-y-8">
+			<div class="flex flex-col gap-y-2 text-center">
+				<h1 class="text-primary text-3xl font-bold tracking-tight">হবে নাকি Coffee?</h1>
+				<p class="text-muted-foreground">Connecting creators with their supporters</p>
+			</div>
+
+			<div class="flex flex-col gap-y-6 pt-6">
+				<div class="flex flex-col gap-y-4">
+					<h2 class="text-2xl font-semibold">আমাদের গল্প (Our Story)</h2>
+					<p class="leading-relaxed">
+						<span class="font-medium">হবে নাকি Coffee?</span> হলো এমন একটি প্ল্যাটফর্ম, যেখানে আপনি আপনার
+						ভক্ত ও অনুসারীদের থেকে অতিরিক্ত আয় করতে পারেন। শুধু একটি লিংক শেয়ার করলেই ৩০-৪০% বেশি উপার্জন
+						সম্ভব। আপনার প্রিয় সমর্থকদের আপনাকে সাহায্য করার সুযোগ দিন। এক্সক্লুসিভ কনটেন্ট, উপহার, ব্যক্তিগত
+						পণ্য এবং সরাসরি সাপোর্ট—সবকিছুই এখন এক জায়গায়!
+					</p>
+					<p class="leading-relaxed">
+						<span class="font-medium">হবে নাকি Coffee?</span> is a platform where you can earn extra
+						money from your fans and followers. Earn 30-40% more just by sharing a single link. Give
+						your loyal supporters a chance to show their appreciation. From exclusive content and gifts
+						to personal products and one-on-one support—everything is now possible from a single platform.
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-y-4">
+					<h2 class="text-2xl font-semibold">আমরা কারা (Who We Are)</h2>
+					<p class="leading-relaxed">
+						<span class="font-medium">হবে নাকি Coffee?</span> এর পেছনে রয়েছে একটি ছোট্ট কিন্তু উৎসাহী
+						দল। আমরা অক্লান্তভাবে কাজ করছি আমাদের প্ল্যাটফর্ম বাড়াতে এবং সারাদেশের আরো বেশি সৃষ্টিশীল
+						মানুষদের কাছে পৌঁছাতে। যা একটি সাধারণ চিন্তা হিসেবে শুরু হয়েছিল, তা এখন পরিণত হয়েছে একটি
+						লক্ষ্যে— সৃষ্টিশীল মানুষদের ক্ষমতায়ন করা এবং তাদের সমর্থকদের সাথে অর্থপূর্ণ সম্পর্ক গড়ে
+						তোলা।
+					</p>
+					<p class="leading-relaxed">
+						Behind <span class="font-medium">হবে নাকি Coffee?</span> is a small, dedicated team of passionate
+						individuals. We're working tirelessly to expand our platform and reach more creators across
+						the country. What started as a simple idea has grown into a mission to empower creators and
+						build meaningful connections between them and their supporters.
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-y-4">
+					<h2 class="text-2xl font-semibold">আমাদের প্রতিশ্রুতি (Our Commitment)</h2>
+					<p class="leading-relaxed">
+						প্রতিটি কোড লাইন, প্রতিটি ফিচার, এবং প্রতিটি আপডেট আপনাদের প্রতি—আমাদের ব্যবহারকারীদের
+						প্রতি আমাদের গভীর প্রতিশ্রুতি থেকে আসে। আমরা অসংখ্য রাত জেগেছি, অনেক চ্যালেঞ্জ
+						পেরিয়েছি, এবং এই প্ল্যাটফর্ম তৈরি করতে আমাদের পুরো হৃদয় ঢেলে দিয়েছি। আপনাদের সাফল্যই
+						আমাদের সাফল্য, এবং আমাদের প্ল্যাটফর্মের মাধ্যমে সৃষ্টিশীল মানুষদের উন্নতি দেখে আমরা
+						গর্বিত।
+					</p>
+					<p class="leading-relaxed">
+						আমরা বুঝি যে নিজের সৃষ্টিকে বিশ্বের সামনে তুলে ধরতে কতটা সাহস লাগে, এবং আপনার এই যাত্রার
+						অংশ হতে পেরে আমরা সম্মানিত। আপনাদের মতামতই আমাদের পথ নির্ধারণ করে, এবং আপনাদের গল্পগুলোই
+						আমাদের উন্নতির পথে এগিয়ে যাওয়ার প্রেরণা জোগায়।
+					</p>
+
+					<p class="leading-relaxed">
+						Every line of code, every feature, and every update comes from our deep commitment to
+						you—our users. We've spent countless late nights, overcome numerous challenges, and
+						poured our hearts into building this platform. Your success is our success, and we take
+						immense pride in seeing creators thrive through our platform.
+					</p>
+					<p class="leading-relaxed">
+						We understand the courage it takes to share your work with the world, and we're honored
+						to be part of your journey. Your feedback shapes our roadmap, and your stories fuel our
+						motivation to keep improving.
+					</p>
+				</div>
+
+				<div class="border-t pt-6">
+					<p class="text-muted-foreground italic">
+						"We believe that every creator deserves to be valued and supported. Our mission is to
+						make that possible, one coffee at a time."
+					</p>
+					<div class="mt-4 flex items-center justify-end">
+						<div class="flex items-center gap-2">
+							<Heart class="h-4 w-4 text-rose-500" />
+							<p class="font-medium">হবে নাকি Coffee?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>

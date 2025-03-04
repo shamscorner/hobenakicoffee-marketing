@@ -167,7 +167,13 @@ const en = {
 			send: 'Send',
 			privacyHint: 'By using this form, you agree to our privacy policy.',
 		},
-		ourMoto: "We believe that every creator has a unique talent worth sharing with the world. We respect your talent, value your achievements, and help you succeed."
+		ourMoto: "We believe that every creator deserves to be valued and supported. Our mission is to make that possible, one coffee at a time."
+	},
+
+	pageAbout: {
+		title: 'About Us',
+		description: `Learn more about ${productName} and the team behind it.`,
+		keywords: `about, about us, ${productName}`,
 	},
 
 	pagePrivacyPolicy: {
