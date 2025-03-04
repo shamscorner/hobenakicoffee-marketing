@@ -35,11 +35,11 @@ type RootTranslation = {
 	 */
 	appTwitterAccount: string
 	/**
-	 * h​t​t​p​s​:​/​/​s​h​a​m​s​c​o​r​n​e​r​.​c​o​m
+	 * h​t​t​p​s​:​/​/​h​o​b​e​n​a​k​i​c​o​f​f​e​e​.​c​o​m
 	 */
 	domain: string
 	/**
-	 * c​o​n​t​a​c​t​@​s​h​a​m​s​c​o​r​n​e​r​.​c​o​m
+	 * m​a​i​l​@​h​o​b​e​n​a​k​i​c​o​f​f​e​e​.​c​o​m
 	 */
 	contactEmail: string
 	/**
@@ -374,6 +374,66 @@ type RootTranslation = {
 			}
 		}
 	}
+	pageContact: {
+		/**
+		 * C​o​n​t​a​c​t​ ​U​s
+		 */
+		title: string
+		/**
+		 * I​f​ ​y​o​u​ ​h​a​v​e​ ​a​n​y​ ​q​u​e​s​t​i​o​n​s​ ​o​r​ ​w​o​u​l​d​ ​l​i​k​e​ ​t​o​ ​c​o​n​t​a​c​t​ ​u​s​,​ ​p​l​e​a​s​e​ ​f​i​l​l​ ​o​u​t​ ​t​h​e​ ​f​o​r​m​ ​b​e​l​o​w​ ​o​r​ ​e​m​a​i​l​ ​u​s​ ​d​i​r​e​c​t​l​y​.
+		 */
+		description: string
+		/**
+		 * c​o​n​t​a​c​t​,​ ​c​o​n​t​a​c​t​ ​u​s​,​ ​হ​ব​ে​ ​ন​া​ক​ি​ ​C​o​f​f​e​e​?
+		 */
+		keywords: string
+		contactForm: {
+			/**
+			 * F​u​l​l​ ​N​a​m​e
+			 */
+			fullName: string
+			/**
+			 * A​b​d​u​r​ ​R​a​h​m​a​n
+			 */
+			fullNamePlaceholder: string
+			/**
+			 * E​m​a​i​l
+			 */
+			email: string
+			/**
+			 * a​b​d​u​r​-​r​a​h​m​a​n​@​g​m​a​i​l​.​c​o​m
+			 */
+			emailPlaceholder: string
+			/**
+			 * S​u​b​j​e​c​t
+			 */
+			subject: string
+			/**
+			 * A​b​o​u​t​ ​a​c​c​o​u​n​t​ ​a​c​t​i​v​a​t​i​o​n
+			 */
+			subjectPlaceholder: string
+			/**
+			 * M​e​s​s​a​g​e
+			 */
+			message: string
+			/**
+			 * H​e​l​l​o​,​ ​I​ ​h​a​v​e​ ​a​ ​q​u​e​s​t​i​o​n​ ​a​b​o​u​t​ ​m​y​ ​a​c​c​o​u​n​t​.​.​.
+			 */
+			messagePlaceholder: string
+			/**
+			 * S​e​n​d
+			 */
+			send: string
+			/**
+			 * B​y​ ​u​s​i​n​g​ ​t​h​i​s​ ​f​o​r​m​,​ ​y​o​u​ ​a​g​r​e​e​ ​t​o​ ​o​u​r​ ​p​r​i​v​a​c​y​ ​p​o​l​i​c​y​.
+			 */
+			privacyHint: string
+		}
+		/**
+		 * W​e​ ​b​e​l​i​e​v​e​ ​t​h​a​t​ ​e​v​e​r​y​ ​c​r​e​a​t​o​r​ ​h​a​s​ ​a​ ​u​n​i​q​u​e​ ​t​a​l​e​n​t​ ​w​o​r​t​h​ ​s​h​a​r​i​n​g​ ​w​i​t​h​ ​t​h​e​ ​w​o​r​l​d​.​ ​W​e​ ​r​e​s​p​e​c​t​ ​y​o​u​r​ ​t​a​l​e​n​t​,​ ​v​a​l​u​e​ ​y​o​u​r​ ​a​c​h​i​e​v​e​m​e​n​t​s​,​ ​a​n​d​ ​h​e​l​p​ ​y​o​u​ ​s​u​c​c​e​e​d​.
+		 */
+		ourMoto: string
+	}
 	pagePrivacyPolicy: {
 		/**
 		 * P​r​i​v​a​c​y​ ​P​o​l​i​c​y
@@ -688,11 +748,11 @@ export type TranslationFunctions = {
 	 */
 	appTwitterAccount: () => LocalizedString
 	/**
-	 * https://shamscorner.com
+	 * https://hobenakicoffee.com
 	 */
 	domain: () => LocalizedString
 	/**
-	 * contact@shamscorner.com
+	 * mail@hobenakicoffee.com
 	 */
 	contactEmail: () => LocalizedString
 	/**
@@ -1026,6 +1086,66 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+	}
+	pageContact: {
+		/**
+		 * Contact Us
+		 */
+		title: () => LocalizedString
+		/**
+		 * If you have any questions or would like to contact us, please fill out the form below or email us directly.
+		 */
+		description: () => LocalizedString
+		/**
+		 * contact, contact us, হবে নাকি Coffee?
+		 */
+		keywords: () => LocalizedString
+		contactForm: {
+			/**
+			 * Full Name
+			 */
+			fullName: () => LocalizedString
+			/**
+			 * Abdur Rahman
+			 */
+			fullNamePlaceholder: () => LocalizedString
+			/**
+			 * Email
+			 */
+			email: () => LocalizedString
+			/**
+			 * abdur-rahman@gmail.com
+			 */
+			emailPlaceholder: () => LocalizedString
+			/**
+			 * Subject
+			 */
+			subject: () => LocalizedString
+			/**
+			 * About account activation
+			 */
+			subjectPlaceholder: () => LocalizedString
+			/**
+			 * Message
+			 */
+			message: () => LocalizedString
+			/**
+			 * Hello, I have a question about my account...
+			 */
+			messagePlaceholder: () => LocalizedString
+			/**
+			 * Send
+			 */
+			send: () => LocalizedString
+			/**
+			 * By using this form, you agree to our privacy policy.
+			 */
+			privacyHint: () => LocalizedString
+		}
+		/**
+		 * We believe that every creator has a unique talent worth sharing with the world. We respect your talent, value your achievements, and help you succeed.
+		 */
+		ourMoto: () => LocalizedString
 	}
 	pagePrivacyPolicy: {
 		/**

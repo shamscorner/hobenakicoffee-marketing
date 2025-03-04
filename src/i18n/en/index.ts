@@ -151,6 +151,25 @@ const en = {
 		},
 	},
 
+	pageContact: {
+		title: 'Contact Us',
+		description: `If you have any questions or would like to contact us, please fill out the form below or email us directly.`,
+		keywords: `contact, contact us, ${productName}`,
+		contactForm: {
+			fullName: 'Full Name',
+			fullNamePlaceholder: 'Abdur Rahman',
+			email: 'Email',
+			emailPlaceholder: 'abdur-rahman@gmail.com',
+			subject: 'Subject',
+			subjectPlaceholder: 'About account activation',
+			message: 'Message',
+			messagePlaceholder: 'Hello, I have a question about my account...',
+			send: 'Send',
+			privacyHint: 'By using this form, you agree to our privacy policy.',
+		},
+		ourMoto: "We believe that every creator has a unique talent worth sharing with the world. We respect your talent, value your achievements, and help you succeed."
+	},
+
 	pagePrivacyPolicy: {
 		title: 'Privacy Policy',
 		description: `This privacy policy will help you understand how ${productName} uses and protects the data you provide to us when you visit and use ${productName}.`,

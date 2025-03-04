@@ -1,20 +1,22 @@
 ---
 import { Coffee } from 'lucide-astro';
+
+import { LL } from '@utils/i18n';
 ---
 
 <div
 	class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-6 md:col-span-2 lg:col-span-3"
 >
 	<div class="mb-4 flex items-center">
-		<Coffee class="mr-2 h-5 w-5 text-primary" />
-		<h3 class="font-medium text-slate-800">হবে নাকি Coffee? 😊</h3>
+		<Coffee class="text-primary mr-2 h-5 w-5" />
+		<h3 class="font-medium text-slate-800">{LL.appName()} 😊</h3>
 	</div>
 	<p class="mb-4 text-sm text-slate-600">
 		আপনার প্রিয় ক্রিয়েটরকে ভার্চুয়াল কফির মাধ্যমে সমর্থন করুন, যাতে তারা আরও সুন্দর ও সৃজনশীল কাজ
 		চালিয়ে যেতে পারে! ☕✨
 	</p>
 
-	<div class="mb-4 rounded-lg bg-primary/5 p-4 text-primary">
+	<div class="bg-primary/5 text-primary mb-4 rounded-lg p-4">
 		<p class="mb-2 text-sm font-medium">কয়টা কফি কিনে দিতে চাচ্ছেন?</p>
 		<div class="flex flex-wrap items-center gap-3">
 			<div class="flex flex-col items-center">
@@ -66,7 +68,7 @@ import { Coffee } from 'lucide-astro';
 
 	<div class="mt-auto">
 		<div
-			class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
+			class="bg-primary inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white"
 		>
 			কফি দিয়ে সাপোর্ট করুন
 		</div>

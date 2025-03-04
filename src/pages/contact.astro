@@ -1,0 +1,169 @@
+---
+import { LL } from '@utils/i18n';
+
+import Layout from '@layouts/Layout.astro';
+
+export const prerender = 'false';
+---
+
+<script>
+	import { actions } from 'astro:actions';
+
+	const form = document.querySelector('#contact-us-form') as HTMLFormElement;
+
+	form?.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		const formData = new FormData(form);
+
+		const submitButton = document.querySelector('#contact-us-submit-button') as HTMLButtonElement;
+		submitButton.disabled = true;
+		submitButton.classList.add('pointer-events-none', 'opacity-50');
+
+		const successMessage = document.querySelector(
+			'#contact-us-success-message'
+		) as HTMLParagraphElement;
+		successMessage.textContent = '';
+
+		const { data } = await actions.contactUs.sendEmail(formData);
+
+		if (data?.success) {
+			form.reset();
+			successMessage.classList.add('text-green-600');
+		} else {
+			successMessage.classList.add('text-red-600');
+		}
+
+		successMessage.textContent = data?.message || 'Failed to send email! mail@hobenakicoffee.com';
+
+		submitButton.disabled = false;
+		submitButton.classList.remove('pointer-events-none', 'opacity-50');
+
+		setTimeout(() => {
+			successMessage.textContent = '';
+		}, 5000);
+	});
+</script>
+
+<Layout
+	title={LL.pageContact.title()}
+	description={LL.pageContact.description()}
+	keywords={LL.pageContact.keywords()}
+>
+	<div class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+		<svg
+			class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+			aria-hidden="true"
+		>
+			<defs>
+				<pattern
+					id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+					width="200"
+					height="200"
+					x="50%"
+					y="-64"
+					patternUnits="userSpaceOnUse"
+				>
+					<path d="M100 200V.5M.5 .5H200" fill="none"></path>
+				</pattern>
+			</defs>
+			<svg x="50%" y="-64" class="overflow-visible fill-gray-50">
+				<path
+					d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z"
+					stroke-width="0"></path>
+			</svg>
+			<rect
+				width="100%"
+				height="100%"
+				stroke-width="0"
+				fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"></rect>
+		</svg>
+		<div class="mx-auto max-w-xl lg:max-w-4xl">
+			<h2 class="text-primary text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
+				{LL.pageContact.title()}
+			</h2>
+			<p class="mt-2 text-lg/8 text-gray-600">
+				{LL.pageContact.description()}
+			</p>
+			<div class="mt-16 grid gap-16 sm:gap-y-20 lg:grid-cols-2">
+				<form id="contact-us-form" method="POST" class="grid grid-cols-1 gap-x-8 gap-y-6">
+					<div>
+						<label for="fullName" class="block text-sm/6 font-semibold text-gray-900">
+							{LL.pageContact.contactForm.fullName()}
+						</label>
+						<div class="mt-2.5">
+							<input
+								type="text"
+								name="fullName"
+								id="fullName"
+								autocomplete="given-name"
+								placeholder={LL.pageContact.contactForm.fullNamePlaceholder()}
+								required
+								class="focus:outline-primary block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2"
+							/>
+						</div>
+					</div>
+					<div>
+						<label for="email" class="block text-sm/6 font-semibold text-gray-900">
+							{LL.pageContact.contactForm.email()}
+						</label>
+						<div class="mt-2.5">
+							<input
+								type="email"
+								name="email"
+								id="email"
+								autocomplete="email"
+								placeholder={LL.pageContact.contactForm.emailPlaceholder()}
+								required
+								class="focus:outline-primary block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2"
+							/>
+						</div>
+					</div>
+					<div>
+						<label for="message" class="block text-sm/6 font-semibold text-gray-900">
+							{LL.pageContact.contactForm.message()}
+						</label>
+						<div class="mt-2.5">
+							<textarea
+								id="message"
+								name="message"
+								rows="4"
+								placeholder={LL.pageContact.contactForm.messagePlaceholder()}
+								required
+								class="focus:outline-primary block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2"
+							></textarea>
+						</div>
+					</div>
+					<div class="min-h-5">
+						<p id="contact-us-success-message" class="text-sm font-semibold"></p>
+					</div>
+					<div>
+						<button
+							id="contact-us-submit-button"
+							type="submit"
+							class="bg-primary hover:bg-primary/90 focus-visible:outline-primary block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2"
+						>
+							{LL.pageContact.contactForm.send()}
+						</button>
+						<p class="mt-4 text-sm/6 text-gray-500">
+							{LL.pageContact.contactForm.privacyHint()}
+							<a href="/privacy" class="text-primary font-semibold">privacy&nbsp;policy</a>.
+						</p>
+					</div>
+				</form>
+				<div class="lg:mt-6 lg:w-80 lg:flex-none">
+					<figure class="mt-10">
+						<blockquote class="text-lg/8 font-semibold text-gray-900">
+							<p>
+								“{LL.pageContact.ourMoto()}”
+							</p>
+						</blockquote>
+						<figcaption class="mt-10">
+							<div class="text-primary text-base font-semibold">{LL.appName()}</div>
+							<div class="text-sm/6 text-gray-600">{LL.contactEmail()}</div>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
