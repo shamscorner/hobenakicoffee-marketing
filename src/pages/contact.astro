@@ -51,7 +51,7 @@ export const prerender = 'false';
 >
 	<main class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<svg
-			class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+			class="absolute inset-0 -z-10 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
 			aria-hidden="true"
 		>
 			<defs>
@@ -137,13 +137,18 @@ export const prerender = 'false';
 						<p id="contact-us-success-message" class="text-sm font-semibold"></p>
 					</div>
 					<div>
-						<button
+						<!-- <button
 							id="contact-us-submit-button"
 							type="submit"
 							class="bg-primary hover:bg-primary/90 focus-visible:outline-primary block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2"
 						>
 							{LL.pageContact.contactForm.send()}
-						</button>
+						</button> -->
+						<div
+							class="bg-primary/70 block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm"
+						>
+							{LL.pageContact.contactForm.send()}
+						</div>
 						<p class="mt-4 text-sm/6 text-gray-500">
 							{LL.pageContact.contactForm.privacyHint()}
 							<a href="/privacy" class="text-primary font-semibold">privacy&nbsp;policy</a>.
