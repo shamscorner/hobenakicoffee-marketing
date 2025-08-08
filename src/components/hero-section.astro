@@ -2,10 +2,9 @@
 import { LL } from '@utils/i18n';
 import { Button } from '$lib/components/ui/button/index.js';
 import * as Card from '$lib/components/ui/card/index.js';
-import { unleash } from '@utils/unleash';
 import { cn } from '@utils/index';
 
-const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
+const isUserAuthenticationEnabled = false;
 ---
 
 <script is:inline type="module" async>
@@ -55,11 +54,11 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 	class="relative mx-auto flex flex-col gap-x-6 gap-y-16 py-12 md:h-[calc(300vh-3.5rem)] md:flex-row md:py-0"
 >
 	<div
-		class="box-border flex flex-col justify-center gap-8 md:sticky md:left-0 md:top-[3.5rem] md:mt-0 md:h-[calc(100vh-3.5rem)] md:flex-1"
+		class="box-border flex flex-col justify-center gap-8 md:sticky md:top-[3.5rem] md:left-0 md:mt-0 md:h-[calc(100vh-3.5rem)] md:flex-1"
 	>
 		<div>
 			<p
-				class="mb-5 inline-block rounded-full border px-2 py-0.5 text-sm font-semibold text-muted-foreground"
+				class="text-muted-foreground mb-5 inline-block rounded-full border px-2 py-0.5 text-sm font-semibold"
 			>
 				{LL.landingPage.legend()}
 			</p>
@@ -91,7 +90,7 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 			Object.values(LL.landingPage.heroProps).map((heroItem) => (
 				<Card.Root
 					class={cn(
-						'hero-card absolute left-[calc(50%-175px)] top-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out',
+						'hero-card absolute top-[calc(50%-175px)] left-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out',
 						heroItem.extraClass()
 					)}
 				>
@@ -111,7 +110,7 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 							set:html={heroItem.icon()}
 							aria-hidden="true"
 						/>
-						<p class="mb-14 mt-auto text-2xl font-medium leading-normal text-slate-600">
+						<p class="mt-auto mb-14 text-2xl leading-normal font-medium text-slate-600">
 							{heroItem.subtitle()}
 						</p>
 					</Card.Content>
@@ -130,7 +129,7 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 						<Card.Title class="text-lg font-semibold">{heroItem.title()}</Card.Title>
 					</Card.Header>
 					<Card.Content>
-						<p class="mt-5 text-2xl font-medium leading-normal text-slate-600">
+						<p class="mt-5 text-2xl leading-normal font-medium text-slate-600">
 							{heroItem.subtitle()}
 						</p>
 					</Card.Content>
@@ -138,7 +137,7 @@ const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
-						class="absolute right-4 top-4 h-12 w-12"
+						class="absolute top-4 right-4 h-12 w-12"
 						fill="none"
 						stroke="currentColor"
 						stroke-width="2"

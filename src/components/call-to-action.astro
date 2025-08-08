@@ -2,10 +2,9 @@
 import { Button } from '$lib/components/ui/button/index.js';
 
 import { LL } from '@utils/i18n';
-import { unleash } from '@utils/unleash';
 import { ArrowRight, CheckCircle, Link } from 'lucide-astro';
 
-const isUserAuthenticationEnabled = unleash.isEnabled('userAuthentication');
+const isUserAuthenticationEnabled = false;
 ---
 
 <section class="py-20 sm:px-4">
