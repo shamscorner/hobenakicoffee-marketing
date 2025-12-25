@@ -63,14 +63,14 @@ const isUserAuthenticationEnabled = false;
 				{LL.landingPage.legend()}
 			</p>
 
-			<h1 class="max-w-4xl text-3xl font-semibold sm:text-5xl">
+			<h1 class="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
 				{LL.landingPage.title.part1()}<br />
-				{LL.landingPage.title.part2()}<br />
+				<span class="text-primary">{LL.landingPage.title.part2()}</span><br />
 				{LL.landingPage.title.part3()}
 			</h1>
 		</div>
 
-		<p class="max-w-4xl text-lg tracking-tight">
+		<p class="text-muted-foreground max-w-4xl text-xl">
 			{LL.landingPage.subtitle()}
 		</p>
 
@@ -90,7 +90,7 @@ const isUserAuthenticationEnabled = false;
 			Object.values(LL.landingPage.heroProps).map((heroItem) => (
 				<Card.Root
 					class={cn(
-						'hero-card absolute top-[calc(50%-175px)] left-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out',
+						'hero-card border-primary/10 bg-card/95 absolute top-[calc(50%-175px)] left-[calc(50%-175px)] mb-10 h-[350px] w-[350px] rounded-2xl border p-6 shadow-2xl backdrop-blur-sm transition duration-500 ease-in-out',
 						heroItem.extraClass()
 					)}
 				>
@@ -123,7 +123,10 @@ const isUserAuthenticationEnabled = false;
 		{
 			Object.values(LL.landingPage.heroProps).map((heroItem) => (
 				<Card.Root
-					class={cn('relative transition duration-500 ease-in-out', heroItem.extraClass())}
+					class={cn(
+						'border-primary/10 bg-card/95 relative rounded-xl border shadow-lg transition duration-500 ease-in-out',
+						heroItem.extraClass()
+					)}
 				>
 					<Card.Header>
 						<Card.Title class="text-lg font-semibold">{heroItem.title()}</Card.Title>

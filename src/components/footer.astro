@@ -2,12 +2,12 @@
 import { LL } from '@utils/i18n';
 ---
 
-<footer class="bg-muted" aria-labelledby="footer-heading">
+<footer class="bg-muted/30 border-border/40 border-t" aria-labelledby="footer-heading">
 	<div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
 		<nav class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
 			{
 				Object.values(LL.footer.links).map((item) => (
-					<a href={item.link()} class="transition-all hover:text-foreground">
+					<a href={item.link()} class="text-muted-foreground hover:text-primary transition-colors">
 						{item.name()}
 					</a>
 				))
@@ -18,7 +18,7 @@ import { LL } from '@utils/i18n';
 				href={LL.contactFacebook()}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-foreground"
+				class="text-muted-foreground hover:text-primary transition-colors"
 			>
 				<span class="sr-only">Facebook</span>
 				<svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -32,7 +32,7 @@ import { LL } from '@utils/i18n';
 				href={LL.contactX()}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-foreground"
+				class="text-muted-foreground hover:text-primary transition-colors"
 			>
 				<span class="sr-only">X</span>
 				<svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -45,7 +45,7 @@ import { LL } from '@utils/i18n';
 				href={LL.contactYoutube()}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-foreground"
+				class="text-muted-foreground hover:text-primary transition-colors"
 			>
 				<span class="sr-only">YouTube</span>
 				<svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -56,7 +56,7 @@ import { LL } from '@utils/i18n';
 				</svg>
 			</a>
 		</div>
-		<p class="mt-10 text-center text-sm/6 text-muted-foreground">
+		<p class="text-muted-foreground mt-10 text-center text-sm/6">
 			{LL.footer.copyrights()}
 		</p>
 	</div>
