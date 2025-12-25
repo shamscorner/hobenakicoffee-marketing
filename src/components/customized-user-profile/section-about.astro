@@ -2,25 +2,22 @@
 import { User } from 'lucide-astro';
 ---
 
-<div
-	class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-6 md:col-span-2 lg:col-span-3"
->
+<div class="bg-card flex h-full flex-col rounded-2xl border p-6 md:col-span-2 lg:col-span-3">
 	<div class="mb-4 flex items-center">
-		<User class="mr-2 h-5 w-5 text-blue-500" />
-		<h3 class="font-medium text-slate-800">আব্দুর রাহমান প্রসঙ্গে</h3>
+		<User class="text-primary mr-2 h-5 w-5" />
+		<h3 class="font-medium">আব্দুর রাহমান প্রসঙ্গে</h3>
 	</div>
-	<p class="text-sm text-slate-600">
-		আমি একজন ওয়েব ডেভেলপার ও অনলাইন শিক্ষক। সহজ ও মজার উপায়ে ওয়েব ডেভেলপমেন্ট শেখাই, যাতে সবাই
-		দক্ষ হতে পারে। 😊 প্রযুক্তি ও নতুন আইডিয়া আমাকে সব সময় অনুপ্রাণিত করে! 🚀 শিখছি, শিখাচ্ছি, আর
-		নতুন কিছু তৈরি করার আনন্দ উপভোগ করছি।
+	<p class="text-muted-foreground text-sm leading-relaxed">
+		আমি একজন ওয়েব ডেভেলপার ও অনলাইন শিক্ষক। সহজ ও পরিষ্কারভাবে ওয়েব ডেভেলপমেন্ট শেখাই—যাতে সবাই
+		ধারাবাহিকভাবে দক্ষ হতে পারে। প্রযুক্তি ও নতুন আইডিয়া নিয়ে কাজ করতেই সবচেয়ে বেশি ভালো লাগে।
 	</p>
 	<div class="mt-10 flex items-center md:mt-auto">
-		<div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100">
-			<span class="text-xs font-medium text-blue-700">AR</span>
+		<div class="bg-primary/10 text-primary flex h-8 w-8 items-center justify-center rounded-full">
+			<span class="text-xs font-semibold">AR</span>
 		</div>
 		<div class="ml-2">
-			<p class="text-sm font-medium text-slate-800">আব্দুর রাহমান</p>
-			<p class="text-xs text-slate-500">২০২৫ থেকে পথচলা</p>
+			<p class="text-sm font-medium">আব্দুর রাহমান</p>
+			<p class="text-muted-foreground text-xs">২০২৫ থেকে পথচলা</p>
 		</div>
 	</div>
 </div>

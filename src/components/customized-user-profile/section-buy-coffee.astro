@@ -4,62 +4,61 @@ import { Coffee } from 'lucide-astro';
 import { LL } from '@utils/i18n';
 ---
 
-<div
-	class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-6 md:col-span-2 lg:col-span-3"
->
+<div class="bg-card flex h-full flex-col rounded-2xl border p-6 md:col-span-2 lg:col-span-3">
 	<div class="mb-4 flex items-center">
 		<Coffee class="text-primary mr-2 h-5 w-5" />
-		<h3 class="font-medium text-slate-800">{LL.appName()} 😊</h3>
+		<h3 class="font-medium">{LL.appName()}</h3>
 	</div>
-	<p class="mb-4 text-sm text-slate-600">
-		আপনার প্রিয় ক্রিয়েটরকে ভার্চুয়াল কফির মাধ্যমে সমর্থন করুন, যাতে তারা আরও সুন্দর ও সৃজনশীল কাজ
-		চালিয়ে যেতে পারে! ☕✨
+	<p class="text-muted-foreground mb-4 text-sm leading-relaxed">
+		আপনার প্রিয় ক্রিয়েটরকে ভার্চুয়াল কফির মাধ্যমে সমর্থন করুন—যাতে তারা আরও ধারাবাহিকভাবে কাজ
+		চালিয়ে যেতে পারে।
 	</p>
 
-	<div class="bg-primary/5 text-primary mb-4 rounded-lg p-4">
+	<div class="bg-muted/30 mb-4 rounded-xl border p-4">
 		<p class="mb-2 text-sm font-medium">কয়টা কফি কিনে দিতে চাচ্ছেন?</p>
 		<div class="flex flex-wrap items-center gap-3">
 			<div class="flex flex-col items-center">
-				<div class="mb-1 flex items-center justify-center rounded-xl bg-white p-2">
+				<div class="bg-background mb-1 flex items-center justify-center rounded-xl border p-2">
 					<Coffee class="h-5 w-5" />
 				</div>
 				<span class="text-xs font-medium">৳১০ </span>
 			</div>
 			<div class="flex flex-col items-center">
-				<div class="mb-1 flex items-center justify-center rounded-xl bg-white p-2">
+				<div class="bg-background mb-1 flex items-center justify-center rounded-xl border p-2">
 					<div class="flex">
-						<Coffee class="h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
+						<Coffee class="text-primary h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
 					</div>
 				</div>
 				<span class="text-xs font-medium">৳20</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<div class="mb-1 flex items-center justify-center rounded-xl bg-white p-2">
+				<div class="bg-background mb-1 flex items-center justify-center rounded-xl border p-2">
 					<div class="flex">
-						<Coffee class="h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
+						<Coffee class="text-primary h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
 					</div>
 				</div>
 				<span class="text-xs font-medium">৳৩০</span>
 			</div>
 			<div class="flex flex-col items-center">
-				<div class="mb-1 flex items-center justify-center rounded-xl bg-white p-2">
+				<div class="bg-background mb-1 flex items-center justify-center rounded-xl border p-2">
 					<div class="flex">
-						<Coffee class="h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
-						<Coffee class="-ml-2 h-5 w-5" />
+						<Coffee class="text-primary h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
+						<Coffee class="text-primary -ml-2 h-5 w-5" />
 					</div>
 				</div>
 				<span class="text-xs font-medium">৳৪০</span>
 			</div>
 			<div class="flex flex-col items-center">
 				<div
-					class="mb-1 flex h-9 w-20 items-center justify-center rounded-xl bg-white p-2 font-semibold"
+					class="text-muted-foreground bg-background mb-1 flex h-9 w-20 items-center justify-center rounded-xl border p-2 text-sm font-semibold"
 				>
+					…
 				</div>
 				<span class="text-xs font-medium">অন্যান্য</span>
 			</div>
@@ -68,7 +67,7 @@ import { LL } from '@utils/i18n';
 
 	<div class="mt-auto">
 		<div
-			class="bg-primary inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white"
+			class="bg-primary text-primary-foreground inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold"
 		>
 			কফি দিয়ে সাপোর্ট করুন
 		</div>

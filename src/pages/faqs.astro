@@ -18,11 +18,15 @@ const faqItems: FaqItem[] = Object.values(LL.pageFaqs.items).map((item) => {
 	keywords={LL.pageFaqs.keywords()}
 >
 	<main
-		class="from-secondary/10 grid min-h-screen place-items-center bg-linear-to-b to-white px-6 py-24 sm:py-32 lg:px-8"
+		class="from-secondary/10 to-background grid min-h-screen place-items-center bg-linear-to-b px-6 py-24 sm:py-32 lg:px-8"
 	>
 		<section class="mx-auto w-full max-w-3xl">
-			<h2 class="text-primary text-center text-3xl font-bold">{LL.pageFaqs.title()}</h2>
-			<p class="mx-auto mt-4 mb-10 max-w-xl text-center text-lg">{LL.pageFaqs.description()}</p>
+			<h2 class="text-center text-3xl font-semibold tracking-tight">{LL.pageFaqs.title()}</h2>
+			<p
+				class="text-muted-foreground mx-auto mt-4 mb-10 max-w-xl text-center text-lg leading-relaxed"
+			>
+				{LL.pageFaqs.description()}
+			</p>
 
 			<FaqsComponent client:load faqs={faqItems} />
 		</section>

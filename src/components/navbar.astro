@@ -34,7 +34,7 @@ const isUserAuthenticationEnabled = false;
 </script>
 
 <header
-	class="bg-background sticky top-0 z-40 h-[3.5rem] shadow-xs"
+	class="bg-background/80 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 h-[3.5rem] border-b backdrop-blur"
 	aria-labelledby="footer-heading"
 >
 	<h2 id="header-heading" class="sr-only">{LL.navbar.srOnly.header()}</h2>
@@ -48,7 +48,7 @@ const isUserAuthenticationEnabled = false;
 				Object.values(LL.navbar.items).map((item) => (
 					<a
 						href={item.link()}
-						class="group hover:text-primary relative block overflow-hidden pb-1 text-sm leading-6"
+						class="group hover:text-primary text-muted-foreground relative block overflow-hidden pb-1 text-sm leading-6"
 					>
 						{item.name()}
 						<span class="border-primary absolute right-0 bottom-0 left-0 block -translate-x-full border-b-2 transition-transform delay-100 duration-300 group-hover:translate-x-0" />

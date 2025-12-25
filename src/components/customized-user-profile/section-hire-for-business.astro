@@ -2,37 +2,35 @@
 import { Briefcase } from 'lucide-astro';
 ---
 
-<div
-	class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-6 md:col-span-2 lg:col-span-4"
->
+<div class="bg-card flex h-full flex-col rounded-2xl border p-6 md:col-span-2 lg:col-span-4">
 	<div class="mb-4 flex items-center">
-		<Briefcase class="mr-2 h-5 w-5 text-orange-500" />
-		<h3 class="font-medium text-slate-800">আমাকে নিয়োগ করুন</h3>
+		<Briefcase class="text-primary mr-2 h-5 w-5" />
+		<h3 class="font-medium">আমাকে নিয়োগ করুন</h3>
 	</div>
-	<p class="mb-4 text-sm text-slate-600">
+	<p class="text-muted-foreground mb-4 text-sm leading-relaxed">
 		কাস্টম কাজের জন্য আমাকে নিয়োগ করতে পারেন। আমি আপনার ব্র্যান্ডের জন্য ডিজাইন করতে পারি এবং আপনার
 		প্রয়োজনীয় সাহায্য করতে পারি।
 	</p>
 	<div class="mb-8 grid grid-cols-2 gap-3">
-		<div class="rounded-md bg-orange-50 p-3">
-			<h4 class="mb-1 text-sm font-medium text-slate-800">ডিজাইন পরিষেবা</h4>
-			<p class="text-xs text-slate-600">কাস্টম ইলাস্ট্রেশন, ব্র্যান্ডিং, ইউআই ডিজাইন</p>
-			<p class="mt-2 text-xs font-medium text-orange-700">৫০০ টাকা থেকে শুরু</p>
+		<div class="bg-muted/30 rounded-xl border p-3">
+			<h4 class="mb-1 text-sm font-medium">ডিজাইন পরিষেবা</h4>
+			<p class="text-muted-foreground text-xs">কাস্টম ইলাস্ট্রেশন, ব্র্যান্ডিং, ইউআই ডিজাইন</p>
+			<p class="text-primary mt-2 text-xs font-semibold">৫০০ টাকা থেকে শুরু</p>
 		</div>
-		<div class="rounded-md bg-orange-50 p-3">
-			<h4 class="mb-1 text-sm font-medium text-slate-800">পরামর্শ সেবা</h4>
-			<p class="text-xs text-slate-600">ক্রিয়েটিভ দিকনির্দেশনা এবং কৌশল</p>
-			<p class="mt-2 text-xs font-medium text-orange-700">১৫০ টাকা / ঘণ্টা</p>
+		<div class="bg-muted/30 rounded-xl border p-3">
+			<h4 class="mb-1 text-sm font-medium">পরামর্শ সেবা</h4>
+			<p class="text-muted-foreground text-xs">ক্রিয়েটিভ দিকনির্দেশনা এবং কৌশল</p>
+			<p class="text-primary mt-2 text-xs font-semibold">১৫০ টাকা / ঘণ্টা</p>
 		</div>
 	</div>
 	<div class="mt-auto flex gap-x-2">
 		<div
-			class="inline-flex items-center justify-center rounded-md bg-orange-50 px-4 py-2 text-sm font-medium text-orange-700"
+			class="bg-primary/10 text-primary inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold"
 		>
 			বিস্তারিত জানুন
 		</div>
 		<div
-			class="inline-flex items-center justify-center rounded-md border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-orange-700"
+			class="text-primary bg-background inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-semibold"
 		>
 			পোর্টফলিও দেখুন
 		</div>

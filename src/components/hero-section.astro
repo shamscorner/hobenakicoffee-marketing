@@ -51,26 +51,26 @@ const isUserAuthenticationEnabled = false;
 
 <div
 	id="hero-stack-container"
-	class="relative mx-auto flex flex-col gap-x-6 gap-y-16 py-12 md:h-[calc(300vh-3.5rem)] md:flex-row md:py-0"
+	class="relative mx-auto flex flex-col gap-x-8 gap-y-16 pt-10 pb-16 md:h-[calc(300vh-3.5rem)] md:flex-row md:py-0"
 >
 	<div
 		class="box-border flex flex-col justify-center gap-8 md:sticky md:top-[3.5rem] md:left-0 md:mt-0 md:h-[calc(100vh-3.5rem)] md:flex-1"
 	>
 		<div>
 			<p
-				class="text-muted-foreground mb-5 inline-block rounded-full border px-2 py-0.5 text-sm font-semibold"
+				class="text-muted-foreground bg-background/60 mb-5 inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold backdrop-blur"
 			>
 				{LL.landingPage.legend()}
 			</p>
 
-			<h1 class="max-w-4xl text-3xl font-semibold sm:text-5xl">
+			<h1 class="max-w-4xl text-4xl leading-tight font-semibold tracking-tight sm:text-6xl">
 				{LL.landingPage.title.part1()}<br />
 				{LL.landingPage.title.part2()}<br />
 				{LL.landingPage.title.part3()}
 			</h1>
 		</div>
 
-		<p class="max-w-4xl text-lg tracking-tight">
+		<p class="text-muted-foreground max-w-4xl text-lg leading-relaxed tracking-tight">
 			{LL.landingPage.subtitle()}
 		</p>
 
@@ -82,7 +82,7 @@ const isUserAuthenticationEnabled = false;
 					</Button>
 				)
 			}
-			<span class="text-sm text-gray-800">{LL.landingPage.callToAction.itsFree()}</span>
+			<span class="text-muted-foreground text-sm">{LL.landingPage.callToAction.itsFree()}</span>
 		</div>
 	</div>
 	<div class="sticky top-[3.5rem] hidden h-[calc(100vh-3.5rem)] flex-1 md:block">
@@ -90,7 +90,7 @@ const isUserAuthenticationEnabled = false;
 			Object.values(LL.landingPage.heroProps).map((heroItem) => (
 				<Card.Root
 					class={cn(
-						'hero-card absolute top-[calc(50%-175px)] left-[calc(50%-175px)] mb-10 h-[350px] w-[350px] p-4 transition duration-500 ease-in-out',
+						'hero-card bg-card/80 absolute top-[calc(50%-175px)] left-[calc(50%-175px)] mb-10 h-[350px] w-[350px] rounded-2xl border p-5 shadow-xs backdrop-blur transition duration-500 ease-in-out',
 						heroItem.extraClass()
 					)}
 				>
@@ -110,7 +110,7 @@ const isUserAuthenticationEnabled = false;
 							set:html={heroItem.icon()}
 							aria-hidden="true"
 						/>
-						<p class="mt-auto mb-14 text-2xl leading-normal font-medium text-slate-600">
+						<p class="text-muted-foreground mt-auto mb-14 text-2xl leading-normal font-medium">
 							{heroItem.subtitle()}
 						</p>
 					</Card.Content>
@@ -129,7 +129,7 @@ const isUserAuthenticationEnabled = false;
 						<Card.Title class="text-lg font-semibold">{heroItem.title()}</Card.Title>
 					</Card.Header>
 					<Card.Content>
-						<p class="mt-5 text-2xl leading-normal font-medium text-slate-600">
+						<p class="text-muted-foreground mt-5 text-2xl leading-normal font-medium">
 							{heroItem.subtitle()}
 						</p>
 					</Card.Content>

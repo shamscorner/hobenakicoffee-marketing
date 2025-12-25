@@ -2,47 +2,47 @@
 import { Button } from '$lib/components/ui/button/index.js';
 
 import { LL } from '@utils/i18n';
-import { ArrowRight, CheckCircle, Link } from 'lucide-astro';
+import { ArrowRight, CheckCircle } from 'lucide-astro';
 
 const isUserAuthenticationEnabled = false;
 ---
 
-<section class="py-20 sm:px-4">
+<section class="py-24 sm:px-4">
 	<div class="mx-auto max-w-4xl">
-		<div
-			class="bg-background relative overflow-hidden rounded-2xl border border-none border-gray-100 p-12 text-center"
-		>
+		<div class="bg-card relative overflow-hidden rounded-2xl border p-10 text-center sm:p-12">
 			<div class="from-primary/0 via-primary/5 to-primary/10 absolute inset-0 bg-linear-to-br">
 			</div>
 			<div class="relative z-10">
 				<div
-					class="bg-primary/10 text-primary mb-6 inline-block rounded-full px-4 py-1 text-sm font-medium"
+					class="bg-primary/10 text-primary mb-6 inline-flex items-center rounded-full px-4 py-1 text-sm font-semibold"
 				>
 					{LL.landingPage.callToAction.itsFree()}
 				</div>
 				{
 					isUserAuthenticationEnabled ? (
 						<>
-							<h2 class="mb-6 text-3xl md:text-4xl">{LL.landingPage.callToAction.title()}</h2>
-							<p class="mx-auto mb-8 max-w-2xl text-xl text-gray-600 dark:text-gray-300">
+							<h2 class="mb-4 text-3xl font-semibold tracking-tight md:text-4xl">
+								{LL.landingPage.callToAction.title()}
+							</h2>
+							<p class="text-muted-foreground mx-auto mb-8 max-w-2xl text-lg leading-relaxed">
 								{LL.landingPage.callToAction.subtitle()}
 							</p>
-							<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="2xl" class="shadow-lg">
+							<Button href={import.meta.env.PUBLIC_SIGN_UP_PAGE_URL} size="2xl">
 								{LL.landingPage.callToAction.getStarted()}
 								<ArrowRight class="ml-2 w-5" />
 							</Button>
 						</>
 					) : (
-						<h2 class="my-4 mb-6 text-3xl md:text-4xl">
+						<h2 class="my-4 mb-6 text-3xl font-semibold tracking-tight md:text-4xl">
 							{LL.landingPage.callToAction.inComingMessage()}
 						</h2>
 					)
 				}
 
-				<ul class="mt-8 flex flex-wrap gap-5 sm:justify-center">
+				<ul class="mt-8 flex flex-wrap gap-3 sm:justify-center">
 					{
 						Object.values(LL.landingPage.callToAction.tickItem).map((item) => (
-							<li class="flex items-center rounded-full bg-white/70 px-3 py-1.5 text-left text-sm text-gray-600 shadow-xs">
+							<li class="text-muted-foreground bg-background/60 flex items-center rounded-full border px-3 py-1.5 text-left text-sm backdrop-blur">
 								<CheckCircle size={14} class="text-primary mr-3 shrink-0" aria-hidden="true" />
 								{item}
 							</li>
